@@ -1,0 +1,20 @@
+.inner {
+  position: relative;
+  display: flex;
+  gap: 33px;
+  padding: 77px 320px 95px 320px;
+}
+.inner::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-image: url(./../../assets/images/contact//back.png),
+    linear-gradient(360deg, #7e6af3 15.95%, #6540cd 63.1%);
+  filter: blur(2px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

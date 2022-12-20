@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Regular";
+  src: url(./../../assets/fonts/static/Inter-Regular.ttf);
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Medium";
+  src: url(./../../assets/fonts/static/Inter-Medium.ttf);
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Semi Bold";
+  src: url(./../../assets/fonts/static/Inter-SemiBold.ttf);
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Bold";
+  src: url(./../../assets/fonts/static/Inter-Bold.ttf);
+  font-display: fallback;
+}

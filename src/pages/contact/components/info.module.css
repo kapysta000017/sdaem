@@ -1,0 +1,76 @@
+.inner {
+  position: relative;
+  color: white;
+}
+.title {
+  font-family: "Bold";
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.paragraph {
+  font-family: "Medium";
+  font-size: 16px;
+  width: 480px;
+  margin-bottom: 30px;
+  line-height: 24px;
+}
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.adress {
+  min-width: "323px";
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Semi Bold";
+  font-size: 18px;
+}
+.phone {
+  font-family: "Semi Bold";
+  font-size: 18px;
+  min-width: "323px";
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.containerIcon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.phoneRight {
+  margin-right: 8px;
+}
+.mail {
+  font-family: "Semi Bold";
+  font-size: 18px;
+  border-bottom: 2px solid white;
+  color: white;
+}
+.time {
+  font-family: "Semi Bold";
+  font-size: 18px;
+}
+.timeText {
+  font-family: "Regular";
+}
+.holder {
+  margin-top: 30px;
+  font-size: 14px;
+  font-family: "Regular";
+  margin-bottom: 37px;
+  line-height: 21px;
+}
+.ps {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 21px 25px 21px 26px;
+  background: rgba(80, 57, 189, 0.5);
+  width: 505px;
+  border-radius: 10px;
+  font-family: "Medium";
+  line-height: 24px;
+}

@@ -1,0 +1,65 @@
+.inner {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 320px;
+  background-color: #f8f8f8;
+}
+
+.listAction {
+  font-family: "Medium";
+  display: flex;
+  gap: 67px;
+}
+.listActionItem {
+  color: #664ef9;
+}
+.listActionLike {
+  position: relative;
+  padding-right: 10px;
+}
+.listActionLike::after {
+  content: "";
+  position: absolute;
+  background-image: url(../../../assets/images/navigation/heart.svg);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  left: 76px;
+  top: 1px;
+}
+
+.listInfo {
+  font-family: "Regular";
+  display: flex;
+  gap: 57px;
+}
+.listInfoItem {
+  color: #8291a3;
+}
+.listInfoMap {
+  position: relative;
+  padding-left: 5px;
+}
+.listInfoMap::before {
+  content: "";
+  position: absolute;
+  background-image: url(../../../assets/images/navigation/map.svg);
+  background-repeat: no-repeat;
+  height: 10px;
+  width: 9px;
+  left: -8px;
+  top: 4px;
+}
+.listInfoItemActive {
+  position: relative;
+}
+.listInfoItemActive::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #ffd54f;
+  left: 0px;
+  bottom: -10px;
+}

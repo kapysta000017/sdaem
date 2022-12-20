@@ -1,0 +1,40 @@
+.view {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: -110px;
+  left: 0px;
+  background: rgba(46, 46, 46, 0.7);
+  z-index: 1;
+}
+.container {
+  text-align: center;
+  color: black;
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 406px;
+  height: 313px;
+  padding: 50px 48px 54px;
+  background: white;
+  border-radius: 10px;
+}
+.title {
+  font-family: "Bold";
+  font-size: 25px;
+}
+.info {
+  font-family: "Regular";
+  font-size: 14px;
+  margin: 20px 0px 30px;
+}
+.button {
+  background: #ffd54f;
+  border-radius: 33px;
+  border: 0px solid transparent;
+  width: 161px;
+  height: 48px;
+  font-family: "Bold";
+}

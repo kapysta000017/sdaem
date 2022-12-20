@@ -1,0 +1,79 @@
+.inner {
+  padding: 40px 320px 50px 320px;
+  font-size: 14px;
+  box-shadow: 0px -11px 40px rgba(39, 95, 158, 0.05);
+  display: flex;
+  gap: 90px;
+}
+.links {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 45px;
+  align-items: flex-end;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  font-family: "Regular";
+  gap: 8px;
+}
+.list:last-child {
+  margin-left: 42px;
+}
+.socialIcons {
+  display: flex;
+  gap: 23px;
+  align-items: flex-end;
+}
+.socialPay {
+  display: flex;
+  gap: 15px;
+  position: relative;
+  left: 52px;
+}
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.socialInfo {
+  width: 104px;
+  font-family: "Medium";
+}
+.logo {
+  margin-bottom: 10px;
+}
+.text {
+  margin-top: 36px;
+  font-family: "Regular";
+  font-size: 11px;
+  color: #8291a3;
+}
+.logoText {
+  font-family: "Medium";
+  font-size: 12px;
+  color: #8291a3;
+}
+.linkBold {
+  font-family: "Bold";
+  color: black;
+  margin-bottom: 4px;
+}
+.linkGray {
+  color: #8291a3;
+}
+.listGap {
+  gap: 21px;
+}
+.vk {
+  width: 28px;
+}
+.inst {
+  width: 24px;
+}
+.facebook {
+  width: 24px;
+}
+.linkFlat {
+  margin-bottom: 13px;
+}

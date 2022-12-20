@@ -1,0 +1,52 @@
+.inner {
+  padding: 20px 320px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  font-family: "Semi Bold";
+}
+.logo {
+  margin-right: 5px;
+}
+.add {
+  position: relative;
+  margin-left: 20px;
+  font-family: "Bold";
+  color: white;
+  padding: 10px 18px;
+  padding-left: 38px;
+  background: linear-gradient(90deg, #9d94ff 0%, #6b50e9 94.5%);
+  border-radius: 19px;
+}
+.add:hover {
+  background: linear-gradient(90deg, #867cfc 0%, #6929f3 94.5%);
+}
+.add::before {
+  position: absolute;
+  content: "";
+  background-image: url(../../../assets/images/header/add.svg);
+  background-repeat: no-repeat;
+  height: 12px;
+  width: 12px;
+  top: 12px;
+  left: 16px;
+}
+.item {
+  color: black;
+}
+.itemMap {
+  position: relative;
+  padding-right: 15px;
+}
+.itemMap::after {
+  position: absolute;
+  content: "";
+  background-image: url(../../../assets/images/header/map.svg);
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+  right: -15px;
+}

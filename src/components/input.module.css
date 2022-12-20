@@ -1,0 +1,33 @@
+.label {
+  position: relative;
+}
+.label:hover .icon * {
+  fill: #664ef9;
+}
+.input {
+  padding: 15px 15px 15px 52px;
+  border-radius: 30px;
+  background: #f8f8f8;
+  border: 2px solid transparent;
+  outline: none;
+  width: 260px;
+  margin-top: 15px;
+  font-family: "Medium";
+  cursor: default;
+}
+.input:hover {
+  background: white;
+  border-color: rgba(102, 78, 249, 0.8);
+}
+.input:focus {
+  background: white;
+  border-color: rgba(102, 78, 249, 0.8);
+}
+.icon {
+  position: absolute;
+  left: 20px;
+}
+.icon:hover + .input {
+  background: white;
+  border-color: rgba(102, 78, 249, 0.8);
+}
