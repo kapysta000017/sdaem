@@ -10,10 +10,9 @@
   background: #f8f8f8;
   border: 2px solid transparent;
   outline: none;
-  width: 260px;
-  margin-top: 15px;
   font-family: "Medium";
   cursor: default;
+  font-size: 14px;
 }
 .input:hover {
   background: white;

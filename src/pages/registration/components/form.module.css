@@ -1,0 +1,22 @@
+.title {
+  font-family: "Bold";
+  font-size: 25px;
+  color: #000000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.containerInput {
+  margin-bottom: 20px;
+}
+.containerEmail {
+  margin-bottom: 20px;
+}
+.containerPassword {
+  margin-bottom: 20px;
+}
+.containerRepeatPassword {
+  margin-bottom: 20px;
+}
+.captch {
+  margin-bottom: 20px;
+}

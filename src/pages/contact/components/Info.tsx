@@ -7,7 +7,7 @@ import whatsapp from "./../../../assets/images/contact/socialIcon/watchapp.svg"
 import telegram from "./../../../assets/images/contact/socialIcon/telegram.svg"
 import viber from "./../../../assets/images/contact/socialIcon/viber.svg"
 import exclamation from "./../../../assets/images/contact/socialIcon/exclamation.svg"
-import SocialIcon from "./SocialIcon"
+import SocialIcon from "../../../components/SocialIcon"
 
 export default function Info() {
   return (
@@ -19,28 +19,84 @@ export default function Info() {
       </p>
       <div className={info.icons}>
         <div className={info.containerIcon}>
-          <SocialIcon img={map} />
+          <SocialIcon
+            img={map}
+            style={{
+              minWidth: "30px",
+              maxWidth: "30px",
+              minHeight: "30px",
+              maxHeight: "30px",
+            }}
+          />
           <div className={info.adress}>
             220068, РБ, г. Минск, ул. Осипенко, 21, кв.23
           </div>
         </div>
         <div className={info.containerIcon}>
-          <SocialIcon img={phone} />
+          <SocialIcon
+            img={phone}
+            style={{
+              minWidth: "30px",
+              maxWidth: "30px",
+              minHeight: "30px",
+              maxHeight: "30px",
+            }}
+          />
           <div className={info.phone}>
             <div className={info.phoneRight}>+375 29 621-48-33</div>
-            <SocialIcon img={whatsapp} />
-            <SocialIcon img={telegram} />
-            <SocialIcon img={viber} />
+            <SocialIcon
+              img={whatsapp}
+              style={{
+                minWidth: "30px",
+                maxWidth: "30px",
+                minHeight: "30px",
+                maxHeight: "30px",
+              }}
+            />
+            <SocialIcon
+              img={telegram}
+              style={{
+                minWidth: "30px",
+                maxWidth: "30px",
+                minHeight: "30px",
+                maxHeight: "30px",
+              }}
+            />
+            <SocialIcon
+              img={viber}
+              style={{
+                minWidth: "30px",
+                maxWidth: "30px",
+                minHeight: "30px",
+                maxHeight: "30px",
+              }}
+            />
           </div>
         </div>
         <div className={info.containerIcon}>
-          <SocialIcon img={mail} />
+          <SocialIcon
+            img={mail}
+            style={{
+              minWidth: "30px",
+              maxWidth: "30px",
+              minHeight: "30px",
+              maxHeight: "30px",
+            }}
+          />
           <a href="https://mail.ru/" className={info.mail}>
             sdaem@sdaem.by
           </a>
         </div>
         <div className={info.containerIcon}>
-          <SocialIcon img={time} />
+          <SocialIcon
+            img={time}
+            style={{
+              minWidth: "30px",
+              maxWidth: "30px",
+              minHeight: "30px",
+              maxHeight: "30px",
+            }}
+          />
           <div className={info.time}>
             <span className={info.timeText}>Режим работы:</span> 08:00-22:00
           </div>

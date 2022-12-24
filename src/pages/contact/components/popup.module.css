@@ -18,8 +18,9 @@
   width: 406px;
   height: 313px;
   padding: 50px 48px 54px;
-  background: white;
   border-radius: 10px;
+  background: #fffefe;
+  box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.2);
 }
 .title {
   font-family: "Bold";
@@ -29,12 +30,4 @@
   font-family: "Regular";
   font-size: 14px;
   margin: 20px 0px 30px;
-}
-.button {
-  background: #ffd54f;
-  border-radius: 33px;
-  border: 0px solid transparent;
-  width: 161px;
-  height: 48px;
-  font-family: "Bold";
 }

@@ -1,0 +1,42 @@
+.inner {
+  position: relative;
+  height: 100vh;
+}
+.inner::after {
+  content: "";
+  position: absolute;
+  background: url(./../../assets/images/contact//back.png),
+    linear-gradient(360deg, #7e6af3 15.95%, #6540cd 63.1%);
+  filter: blur(2px);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.container {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  width: 406px;
+  height: 330px;
+  background: #fffefe;
+  box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.2);
+  border-radius: 10px;
+}
+.title {
+  font-family: "Bold";
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.text {
+  font-family: "Regular";
+  font-size: 14px;
+  line-height: 17px;
+  color: #686868;
+  margin-bottom: 22px;
+}

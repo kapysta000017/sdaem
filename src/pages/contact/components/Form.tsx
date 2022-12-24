@@ -1,16 +1,11 @@
 import form from "./form.module.css"
-import { ReactComponent as Mail } from "./../../../assets/images/contact/form/mail.svg"
-import { ReactComponent as User } from "./../../../assets/images/contact/form/user.svg"
+import {
+  componentLoginIcon,
+  componentMailIcon,
+} from "../../../components/componentIcon"
 import { useState } from "react"
 import Popup from "./Popup"
 import Input from "../../../components/Input"
-
-const componentMailIcon = (classname: string) => (
-  <Mail className={classname} style={{ top: "1px" }} />
-)
-const componentUserIcon = (classname: string) => (
-  <User className={classname} style={{ top: "-1px" }} />
-)
 
 export default function Form() {
   const [isPopup, setIsPopup] = useState(false)
@@ -34,21 +29,23 @@ export default function Form() {
       <form autoComplete="off" className={form.inner} onSubmit={submit}>
         <div className={form.user}>
           <div>
-            <div>Ваше имя</div>
+            <div className={form.labelTitle}>Ваше имя</div>
             <Input
               type="text"
               name="name"
               placeholder="Логин"
-              child={componentUserIcon}
+              child={componentLoginIcon}
+              style={{ width: "260px" }}
             />
           </div>
           <div>
-            <div>Ваша электронная почта</div>
+            <div className={form.labelTitle}>Ваша электронная почта</div>
             <Input
-              type="text"
-              name="name"
-              placeholder="Логин"
+              type="email"
+              name="email"
+              placeholder="Введите"
               child={componentMailIcon}
+              style={{ width: "260px" }}
             />
           </div>
         </div>

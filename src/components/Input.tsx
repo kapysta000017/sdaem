@@ -6,20 +6,23 @@ export default function Input({
   name,
   placeholder,
   child,
+  style,
 }: {
   type: string
   name: string
   placeholder: string
   child: (classname: string) => ReactElement
+  style: React.CSSProperties
 }) {
   return (
     <label className={input.label}>
       {child(input.icon)}
       <input
+        className={input.input}
         type={type}
         name={name}
         placeholder={placeholder}
-        className={input.input}
+        style={style}
         required
       />
     </label>

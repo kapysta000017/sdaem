@@ -1,0 +1,26 @@
+.textContainer {
+  margin-top: 55px;
+  left: 100px;
+  line-height: 21px;
+}
+.textAbout {
+  font-family: "Semi Bold";
+  font-size: 14px;
+  color: #686868;
+  margin-left: 39px;
+}
+.text {
+  font-family: "Regular";
+  font-size: 14px;
+  color: #686868;
+  margin-bottom: 70px;
+}
+.auth {
+  margin-top: 70px;
+  margin-left: 40px;
+}
+.authLink {
+  font-family: "Medium";
+  color: #664ef9;
+  margin-left: 4px;
+}

@@ -5,6 +5,9 @@ import Home from "./pages/home"
 import Contact from "./pages/contact"
 import ErrorPage from "./pages/erorr"
 import Auth from "./pages/auth"
+import Registration from "./pages/registration"
+import News from "./pages/news"
+import RegistrationMessage from "./pages/registrationMessage"
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 
@@ -19,6 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "news",
+        element: <News />,
       },
       {
         path: "price",
@@ -35,6 +39,14 @@ const router = createBrowserRouter([
   {
     path: "/auth",
     element: <Auth />,
+  },
+  {
+    path: "/registration",
+    element: <Registration />,
+  },
+  {
+    path: "/registration/message",
+    element: <RegistrationMessage />,
   },
 ])
 

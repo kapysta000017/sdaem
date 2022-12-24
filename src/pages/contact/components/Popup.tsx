@@ -1,5 +1,6 @@
 import popup from "./popup.module.css"
 import ReactDOM from "react-dom"
+import Button from "../../../components/Buttonn"
 
 export default function Popup({
   setIsPopup,
@@ -15,9 +16,9 @@ export default function Popup({
           Какое-то сообщение о том, что письмо отправлено, какое-то сообщение,
           что письмо отправлено.
         </p>
-        <button className={popup.button} onClick={() => setIsPopup(false)}>
+        <Button setIsPopup={setIsPopup} style={{ width: "161px" }}>
           Закрыть окно
-        </button>
+        </Button>
       </div>
     </>,
     document.getElementById("modal") as HTMLElement

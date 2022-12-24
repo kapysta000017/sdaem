@@ -20,10 +20,11 @@
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 50px;
-  background: white;
   border-radius: 10px;
   width: 406px;
   height: 536px;
+  background: #fffefe;
+  box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.2);
 }
 .title {
   font-family: "Bold";
@@ -36,10 +37,7 @@
   line-height: 17px;
   margin-bottom: 35px;
 }
-.name {
-  margin-bottom: 20px;
-}
-.password {
+.labelContainer {
   margin-bottom: 20px;
 }
 .switch {
@@ -60,7 +58,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background: #bdbdbd;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 100px;
@@ -87,4 +85,34 @@
   -webkit-transform: translateX(16px);
   -ms-transform: translateX(16px);
   transform: translateX(16px);
+}
+.passwordInfo {
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  margin-bottom: 38px;
+}
+.keepUser {
+  font-family: "Regular";
+  color: #686868;
+  margin-left: 8px;
+}
+.newPassword {
+  margin-left: 36px;
+  font-family: "Medium";
+  color: #664ef9;
+}
+.containerCreateUser {
+  margin-top: 50px;
+}
+.psCreate {
+  font-family: "Regular";
+  font-size: 14px;
+  color: #686868;
+  margin-right: 4px;
+}
+.createUser {
+  font-family: "Medium";
+  font-size: 14px;
+  color: #664ef9;
 }

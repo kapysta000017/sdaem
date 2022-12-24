@@ -2,17 +2,19 @@ import social from "./socialicon.module.css"
 
 export default function SocialIcon({
   img,
-  width,
+  style,
+  link,
 }: {
   img: string
-  width?: number
+  style: React.CSSProperties
+  link?: boolean
 }) {
-  return width ? (
-    <a href="https://vk.com/" className={social.containerWidth}>
+  return link ? (
+    <a href="https://vk.com/" style={style} className={social.container}>
       <img src={img} alt="social" className={social.img} />
     </a>
   ) : (
-    <div className={social.container}>
+    <div className={social.container} style={style}>
       <img src={img} alt="social" className={social.img} />
     </div>
   )
