@@ -63,3 +63,29 @@
   left: 0px;
   bottom: -10px;
 }
+.user {
+  position: relative;
+  padding-left: 40px;
+  padding-right: 28px;
+}
+.user::before {
+  position: absolute;
+  content: "";
+  background-image: url(../../../assets/images/navigation/avatar.jpg);
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  left: 0;
+  border-radius: 50%;
+  top: -7px;
+}
+.user::after {
+  position: absolute;
+  content: "";
+  background-image: url(../../../assets/images/navigation/arrow.svg);
+  width: 12px;
+  height: 7px;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 5px;
+}

@@ -18,8 +18,10 @@ export default function Auth() {
     const reset = e.target as HTMLFormElement
     console.log(target.name.value, target.password.value)
 
-    reset.reset()
     navigate("/", { replace: true })
+
+    localStorage.setItem("name", target.name.value)
+    reset.reset()
   }
 
   return (

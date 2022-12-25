@@ -1,8 +1,14 @@
 import navigation from "./navigation.module.css"
 import classnames from "classnames"
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
+import { useEffect, useState } from "react"
 
 export default function Navigation() {
+  const [name, setName] = useState<string | null>(null)
+  useEffect(() => {
+    const name = localStorage.getItem("name")
+    setName(name)
+  }, [])
   return (
     <nav className={navigation.inner}>
       <ul className={navigation.listInfo}>
@@ -96,9 +102,18 @@ export default function Navigation() {
           </NavLink>
         </li>
         <li>
-          <NavLink className={navigation.listActionItem} to="/auth">
-            Вход и регистрация
-          </NavLink>
+          {name ? (
+            <Link
+              className={classnames(navigation.listActionItem, navigation.user)}
+              to="/cabinet"
+            >
+              {name}
+            </Link>
+          ) : (
+            <Link className={navigation.listActionItem} to="/auth">
+              Вход и регистрация
+            </Link>
+          )}
         </li>
       </ul>
     </nav>

@@ -8,13 +8,19 @@ import Auth from "./pages/auth"
 import Registration from "./pages/registration"
 import News from "./pages/news"
 import RegistrationMessage from "./pages/registrationMessage"
+import { Provider } from "react-redux"
+import store from "./store"
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <Provider store={store}>
+        <Home />
+      </Provider>
+    ),
     children: [
       {
         path: "/*",
