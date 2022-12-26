@@ -3,4 +3,5 @@ export type New = {
   text: string
   data: string
   id: string
+  image: string
 }

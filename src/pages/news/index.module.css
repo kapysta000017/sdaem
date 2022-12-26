@@ -1,9 +1,145 @@
+.inner {
+  padding: 42px 320px 100px 320px;
+  position: relative;
+}
+.inner::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-image: url(../../assets/images/news/back.png);
+  background-size: cover;
+  height: 90%;
+  max-height: 1000px;
+  width: 1026px;
+  right: 0;
+  top: 30px;
+}
 .containerTitle {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 .search {
   width: 563px;
   padding: 10px 15px 10px 20px;
   border-radius: 30px;
-  border: none;
+  outline: none;
+  border: 0px solid transparent;
+  font-family: "Medium";
+  font-size: 14px;
+}
+.button {
+  border: 0px solid transparent;
+  background: #664ef9;
+  width: 53px;
+  height: 37px;
+  border-radius: 19px;
+  position: relative;
+}
+.searchIcon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.form {
+  display: flex;
+  position: relative;
+  top: 9px;
+}
+.title {
+  font-family: "Bold";
+  font-size: 30px;
+}
+.bread {
+  display: flex;
+  font-family: "Regular";
+  color: #686868;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.breadElement:last-child {
+  padding-left: 17px;
+  position: relative;
+}
+.breadElement:last-child::before {
+  position: absolute;
+  content: "";
+  background-image: url(../../assets/images/news/point.svg);
+  width: 3px;
+  height: 4px;
+  left: 7px;
+  bottom: 6px;
+}
+.breadElement {
+  padding-left: 7px;
+}
+.img {
+  width: 406px;
+  height: 226px;
+  border-radius: 10px;
+}
+.titleCard {
+  line-height: 19px;
+  color: #1e2123;
+  font-family: "Bold";
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.textCard {
+  font-size: 14px;
+  line-height: 17px;
+  color: #686868;
+  font-family: "Regular";
+  margin-bottom: 45px;
+  overflow: hidden;
+  height: 85px;
+}
+.data {
+  font-family: "Medium";
+  font-size: 14px;
+  color: #8291a3;
+  padding: 12px 8px;
+  background: #f8f8f8;
+  border-radius: 18px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 500px 500px 500px;
+  grid-gap: 30px;
+}
+.card {
+  background: white;
+  filter: drop-shadow(0px 20px 40px rgba(135, 124, 202, 0.15));
+  border-radius: 10px;
+}
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 23px 20px;
+  height: 275px;
+  justify-content: space-between;
+}
+.ps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.ps::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: rgba(248, 248, 248, 1);
+  top: -20px;
+}
+.link {
+  padding: 10px 15px;
+  background: rgba(102, 78, 249, 0.1);
+  border-radius: 17px;
+  color: #664ef9;
+  font-size: 14px;
+  font-family: "Bold";
 }
