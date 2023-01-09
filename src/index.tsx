@@ -7,6 +7,7 @@ import ErrorPage from "./pages/erorr"
 import Auth from "./pages/auth"
 import Registration from "./pages/registration"
 import News from "./pages/news"
+import NewsDescription from "./pages/newsDescription"
 import RegistrationMessage from "./pages/registrationMessage"
 import { Provider } from "react-redux"
 import store from "./store"
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
         <Home />
       </Provider>
     ),
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/*",
@@ -29,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "news",
         element: <News />,
+      },
+      {
+        path: "news/:id",
+        element: <NewsDescription />,
       },
       {
         path: "price",

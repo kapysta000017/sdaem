@@ -5,3 +5,12 @@ export type New = {
   id: string
   image: string
 }
+export interface IBread {
+  name: string
+  link: string
+}
+export type StoreBread = {
+  bread: Array<IBread>
+  status: string
+  error: string | null
+}

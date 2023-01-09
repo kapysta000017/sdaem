@@ -1,26 +1,28 @@
 import { Link } from "react-router-dom"
-import card from "./card.module.css"
+import card from "./cards.module.css"
 import { New } from "../store/type"
+import { useAppSelector } from "../../../store/hook/selector"
+import { selectAllNews } from "../store/sliceNews"
+import { useEffect } from "react"
+import { useAppDispatch } from "../../../store/hook/dispatch"
+import { fetchAllNews } from "../store/sliceNews"
 
-const Cards: React.FC<{
-  news: New[]
-  setBread: React.Dispatch<
-    React.SetStateAction<
-      {
-        name: string
-        link: string
-      }[]
-    >
-  >
-}> = ({ news, setBread }) => {
+const Cards = () => {
+  const news = useAppSelector(selectAllNews) as New[]
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    dispatch(fetchAllNews())
+  }, [dispatch])
+
   return (
     <div className={card.inner}>
       {news.map((element) => (
-        <div className={card.card} key={element.id}>
+        <div className={card.container} key={element.id}>
           <img className={card.img} src={element.image} alt="новость" />
-          <div className={card.infoCard}>
-            <h6 className={card.titleCard}>{element.title}</h6>
-            <p className={card.textCard}>{element.text}</p>
+          <div className={card.info}>
+            <h6 className={card.title}>{element.title}</h6>
+            <p className={card.text}>{element.text}</p>
             <div className={card.ps}>
               <span className={card.data}>{element.data}</span>
               <Link className={card.link} to={`/news/${element.id}`}>

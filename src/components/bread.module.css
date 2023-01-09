@@ -1,0 +1,25 @@
+.inner {
+  display: flex;
+  font-family: "Regular";
+  color: #686868;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.element:last-child {
+  padding-left: 17px;
+  position: relative;
+  color: #686868;
+}
+.element:last-child::before {
+  position: absolute;
+  content: "";
+  background-image: url(../assets/images/news/point.svg);
+  width: 3px;
+  height: 4px;
+  left: 7px;
+  bottom: 6px;
+}
+.element {
+  padding-left: 7px;
+  color: #4e64f9;
+}

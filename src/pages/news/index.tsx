@@ -1,25 +1,18 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useAppDispatch } from "../../store/hook/dispatch"
-import { useAppSelector } from "../../store/hook/selector"
-import { fetchAllNews, selectAllNews } from "./store/sliceNews"
-import { New } from "./store/type"
+import { fetchAllNews } from "./store/sliceNews"
 import newss from "./index.module.css"
 import search from "./../../assets/images/news/search.svg"
-import home from "./../../assets/images/news/home.svg"
-import { NavLink } from "react-router-dom"
 import Cards from "./components/Cards"
+import Bread from "../../components/Bread"
+import { updateBread } from "./store/sliceBread"
 
 export default function News() {
-  const [bread, setBread] = useState<{ name: string; link: string }[]>([
-    { name: "Новости", link: "/news" },
-    { name: "lskdjf", link: "/news/1" },
-  ])
-
   const dispatch = useAppDispatch()
-  const news = useAppSelector(selectAllNews) as New[]
 
   useEffect(() => {
     dispatch(fetchAllNews())
+    dispatch(updateBread({ name: "Новости", link: "/news" }))
   }, [dispatch])
 
   const submit = (e: React.SyntheticEvent) => {
@@ -31,18 +24,7 @@ export default function News() {
   }
   return (
     <div className={newss.inner}>
-      <ul className={newss.bread}>
-        <img src={home} alt="home" />
-        {bread.map((element) => (
-          <NavLink
-            to={element.link}
-            className={newss.breadElement}
-            key={Math.random()}
-          >
-            {element.name}
-          </NavLink>
-        ))}
-      </ul>
+      <Bread />
       <div className={newss.containerTitle}>
         <h3 className={newss.title}>Новости </h3>
         <form className={newss.form} autoComplete="off" onSubmit={submit}>
@@ -57,7 +39,7 @@ export default function News() {
           </button>
         </form>
       </div>
-      <Cards news={news} setBread={setBread} />
+      <Cards />
     </div>
   )
 }
