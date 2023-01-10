@@ -8,13 +8,11 @@ const initialState: StoreBread = {
   error: null,
 }
 
-export const ferchOneNewsBread = createAsyncThunk(
+export const fetchOneNewsBread = createAsyncThunk(
   "bread/fetchOneNews",
   async (id: string | undefined, { rejectWithValue }) => {
     try {
-      const news = await axios(
-        `https://6264063ba6adc673188c6c37.mockapi.io/news/${id}`
-      )
+      const news = await axios(`http://localhost:3001/news/${id}`)
       return { name: news.data.title as string, link: `/news/${id}` }
     } catch (error) {
       const e = error as Error
@@ -36,15 +34,15 @@ const slice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(ferchOneNewsBread.fulfilled, (state, action) => {
+    builder.addCase(fetchOneNewsBread.fulfilled, (state, action) => {
       state.bread[1] = action.payload!
       state.status = ""
       state.error = null
     })
-    builder.addCase(ferchOneNewsBread.rejected, (state, action) => {
+    builder.addCase(fetchOneNewsBread.rejected, (state, action) => {
       state.error = action.payload as string
     })
-    builder.addCase(ferchOneNewsBread.pending, (state) => {
+    builder.addCase(fetchOneNewsBread.pending, (state) => {
       state.status = "loading"
     })
   },

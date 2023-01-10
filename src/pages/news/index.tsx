@@ -1,6 +1,5 @@
 import { useEffect } from "react"
 import { useAppDispatch } from "../../store/hook/dispatch"
-import { fetchAllNews } from "./store/sliceNews"
 import newss from "./index.module.css"
 import search from "./../../assets/images/news/search.svg"
 import Cards from "./components/Cards"
@@ -11,7 +10,6 @@ export default function News() {
   const dispatch = useAppDispatch()
 
   useEffect(() => {
-    dispatch(fetchAllNews())
     dispatch(updateBread({ name: "Новости", link: "/news" }))
   }, [dispatch])
 

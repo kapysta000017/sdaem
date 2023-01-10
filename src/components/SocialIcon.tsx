@@ -11,11 +11,11 @@ export default function SocialIcon({
 }) {
   return link ? (
     <a href="https://vk.com/" style={style} className={social.container}>
-      <img src={img} alt="social" className={social.img} />
+      <img src={img} alt="social" />
     </a>
   ) : (
     <div className={social.container} style={style}>
-      <img src={img} alt="social" className={social.img} />
+      <img src={img} alt="social" />
     </div>
   )
 }

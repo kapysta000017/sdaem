@@ -5,29 +5,25 @@ import home from "./../assets/images/news/home.svg"
 import { useAppSelector } from "../store/hook/selector"
 import { IBread } from "../pages/news/store/type"
 import { useAppDispatch } from "../store/hook/dispatch"
-import { ferchOneNewsBread } from "../pages/news/store/sliceBread"
+import { fetchOneNewsBread } from "../pages/news/store/sliceBread"
 
 export default function Bread() {
   const breadCrumb = useAppSelector(
     (state) => state.bread.bread
   ) as Array<IBread>
-  const { error, status } = useAppSelector((state) => state.bread)
+  const { status } = useAppSelector((state) => state.bread)
   const { id } = useParams()
   const dispatch = useAppDispatch()
 
   useEffect(() => {
-    id && dispatch(ferchOneNewsBread(id))
+    id && dispatch(fetchOneNewsBread(id))
   }, [dispatch, id])
 
-  if (error) {
-    return <div className={bread.inner}>такой новости нету</div>
-  }
   if (status) {
     return <div className={bread.inner}>loading...</div>
   }
   return (
     <div className={bread.inner}>
-      {}
       <img src={home} alt="home" />
       {breadCrumb.map((element) => (
         <Link to={element.link} className={bread.element} key={Math.random()}>
