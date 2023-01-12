@@ -5,16 +5,10 @@ import search from "./../../assets/images/news/search.svg"
 import Cards from "../../components/Cards"
 import Bread from "../../components/Bread"
 import { updateBread } from "./store/sliceBread"
-import { Link, useSearchParams } from "react-router-dom"
-import classnames from "classnames"
-import onAddNumberPagination from "./logic/addNumberPagination"
+import Pagination from "../../components/Pagination"
 
 export default function News() {
-  const [pagination, setPagination] = useState<Array<number | string>>([2, 3])
-
   const dispatch = useAppDispatch()
-  const [searchParams, setSearchParams] = useSearchParams()
-  const pageNumber = searchParams.get("_page")
 
   useEffect(() => {
     dispatch(updateBread({ name: "Новости", link: "/news" }))
@@ -45,35 +39,7 @@ export default function News() {
         </form>
       </div>
       <Cards />
-      <ul className={newss.pagination}>
-        <Link
-          to={"/news"}
-          className={classnames(
-            newss.paginationElement,
-            pageNumber === null ? newss.active : null
-          )}
-        >
-          1
-        </Link>
-        {pagination.map((element) => (
-          <Link
-            to={`/news?_page=${element}`}
-            key={Math.random()}
-            className={classnames(
-              newss.paginationElement,
-              `/news?_page=${element}` === `/news?_page=${pageNumber}`
-                ? newss.active
-                : null
-            )}
-            onClick={() => {
-              onAddNumberPagination(element, pagination, setPagination)
-            }}
-          >
-            {element}
-          </Link>
-        ))}
-        <li className={newss.paginationElement}>...</li>
-      </ul>
+      <Pagination />
     </div>
   )
 }
