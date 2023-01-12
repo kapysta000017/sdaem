@@ -12,9 +12,12 @@ const initialState = adapter.getInitialState({ status: "", error: "" })
 
 export const fetchAllNews = createAsyncThunk(
   "news/fetchAll",
-  async (_, { rejectWithValue }) => {
+  async (pageNumber: string | null, { rejectWithValue }) => {
+    if (pageNumber === null) pageNumber = "1"
     try {
-      const news = await axios("http://localhost:3001/news")
+      const news = await axios(
+        `http://localhost:3001/news?_page=${pageNumber}&_limit=9`
+      )
       return news.data as New[]
     } catch (error) {
       const e = error as Error
@@ -30,7 +33,7 @@ const slice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchAllNews.fulfilled, (state, action) => {
-      adapter.upsertMany(state, action.payload)
+      adapter.setAll(state, action.payload)
       state.status = ""
       state.error = ""
     })
@@ -44,6 +47,5 @@ const slice = createSlice({
 })
 
 export default slice.reducer
-export const { selectAll: selectAllNews } = adapter.getSelectors(
-  (state: RootState) => state.news
-)
+export const { selectAll: selectAllNews, selectById: selectByIdNews } =
+  adapter.getSelectors((state: RootState) => state.news)

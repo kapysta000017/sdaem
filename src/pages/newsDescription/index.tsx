@@ -11,7 +11,7 @@ import whatsapp from "../../assets/images/news/svg/whatsapp.svg"
 import telegram from "../../assets/images/news/svg/telegram.svg"
 import viber from "../../assets/images/news/svg/viber.svg"
 import vk from "../../assets/images/news/svg/vk.svg"
-import Cards from "../news/components/Cards"
+import Cards from "../../components/Cards"
 
 export default function NewsDescription() {
   const dispatch = useAppDispatch()
