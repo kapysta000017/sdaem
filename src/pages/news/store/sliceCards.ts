@@ -13,7 +13,6 @@ const initialState = adapter.getInitialState({ status: "", error: "" })
 export const fetchAllNews = createAsyncThunk(
   "news/fetchAll",
   async (pageNumber: string | null, { rejectWithValue }) => {
-    if (pageNumber === null) pageNumber = "1"
     try {
       const news = await axios(
         `http://localhost:3001/news?_page=${pageNumber}&_limit=9`

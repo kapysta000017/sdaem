@@ -37,7 +37,7 @@ export default function Navigation() {
                   )
                 : navigation.listInfoItem
             }}
-            to="/news"
+            to="/news?_page=1"
           >
             Новости
           </NavLink>

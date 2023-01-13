@@ -6,9 +6,12 @@ import Cards from "../../components/Cards"
 import Bread from "../../components/Bread"
 import { updateBread } from "./store/sliceBread"
 import Pagination from "../../components/Pagination"
+import { useSearchParams } from "react-router-dom"
 
 export default function News() {
   const dispatch = useAppDispatch()
+  const [searchParams, setSearchParams] = useSearchParams()
+  let pageNumber = searchParams.get("_page")
 
   useEffect(() => {
     dispatch(updateBread({ name: "Новости", link: "/news" }))
@@ -19,8 +22,12 @@ export default function News() {
     const target = e.target as typeof e.target & {
       search: { value: string }
     }
-    console.log(target.search.value)
+    setSearchParams({
+      _title: target.search.value,
+      _page: pageNumber as string,
+    })
   }
+
   return (
     <div className={newss.inner}>
       <Bread />

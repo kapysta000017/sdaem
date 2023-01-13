@@ -8,32 +8,20 @@ import { IPagination } from "./typePagination/arrayNumber"
 const Pagination = () => {
   const [paginationArray, setPagination] = useState<Array<IPagination>>([])
   const [searchParams, setSearchParams] = useSearchParams()
-  const pageNumber = searchParams.get("_page")
+  let pageNumber = searchParams.get("_page")
 
   useEffect(() => {
-    if (pageNumber === null) {
-      setPagination((state) => [...state, 2, 3])
-    } else {
-      let paginationArrayAdd = [] as Array<number>
-      for (let i = 2; i <= Number(pageNumber); i++) {
-        paginationArrayAdd.push(i)
-      }
-      setPagination((state) => [...state, ...paginationArrayAdd])
+    let paginationArrayAdd = [] as Array<number>
+    for (let i = 1; i <= Number(pageNumber) + 2; i++) {
+      paginationArrayAdd.push(i)
     }
+    if (paginationArrayAdd.length > 15) paginationArrayAdd.length = 15
+    setPagination((state) => [...state, ...paginationArrayAdd])
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
     <ul className={pagination.inner}>
-      <Link
-        to={"/news"}
-        className={classnames(
-          pagination.paginationElement,
-          pageNumber === null ? pagination.active : null
-        )}
-      >
-        1
-      </Link>
       {paginationArray.map((element) => (
         <Link
           to={`/news?_page=${element}`}

@@ -15,6 +15,7 @@ const Cards: React.FC<{ amount?: number; style?: React.CSSProperties }> = ({
   const dispatch = useAppDispatch()
   const [searchParams, setSearchParams] = useSearchParams()
   const pageNumber = searchParams.get("_page")
+  const valueTitle = searchParams.get("_title")
 
   const news = useAppSelector(selectAllNews) as New[]
   const { error, status } = useAppSelector((state) => state.news)
@@ -40,21 +41,25 @@ const Cards: React.FC<{ amount?: number; style?: React.CSSProperties }> = ({
 
   return (
     <div className={card.inner} style={style}>
-      {news.map((element) => (
-        <div className={card.container} key={element.id}>
-          <img className={card.img} src={element.image} alt="новость" />
-          <div className={card.info}>
-            <h6 className={card.title}>{element.title}</h6>
-            <p className={card.text}>{element.text}</p>
-            <div className={card.ps}>
-              <span className={card.data}>{element.data}</span>
-              <Link className={card.link} to={`/news/${element.id}`}>
-                Читать
-              </Link>
+      {news
+        .filter((element) =>
+          element.title.includes((valueTitle as string) || "")
+        )
+        .map((element) => (
+          <div className={card.container} key={element.id}>
+            <img className={card.img} src={element.image} alt="новость" />
+            <div className={card.info}>
+              <h6 className={card.title}>{element.title}</h6>
+              <p className={card.text}>{element.text}</p>
+              <div className={card.ps}>
+                <span className={card.data}>{element.data}</span>
+                <Link className={card.link} to={`/news/${element.id}`}>
+                  Читать
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   )
 }
