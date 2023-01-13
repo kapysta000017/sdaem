@@ -1,7 +1,9 @@
+import { IPagination } from "../typePagination/arrayNumber"
+
 export default function onAddNumberPagination(
-  valuePagination: number | string,
-  pagination: (string | number)[],
-  setPagination: React.Dispatch<React.SetStateAction<(string | number)[]>>
+  valuePagination: IPagination,
+  pagination: Array<IPagination>,
+  setPagination: React.Dispatch<React.SetStateAction<Array<IPagination>>>
 ) {
   const amount = pagination.length
   if (pagination[amount - 2] === valuePagination) {

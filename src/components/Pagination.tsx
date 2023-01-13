@@ -1,15 +1,27 @@
 import pagination from "./pagination.module.css"
 import classnames from "classnames"
 import { Link, useSearchParams } from "react-router-dom"
-import { useState } from "react"
-import onAddNumberPagination from "./../pages/news/logic/addNumberPagination"
+import { useState, useEffect } from "react"
+import onAddNumberPagination from "./logicPagination/addNumberPagination"
+import { IPagination } from "./typePagination/arrayNumber"
 
 const Pagination = () => {
-  const [paginationArray, setPagination] = useState<Array<number | string>>([
-    2, 3,
-  ])
+  const [paginationArray, setPagination] = useState<Array<IPagination>>([])
   const [searchParams, setSearchParams] = useSearchParams()
   const pageNumber = searchParams.get("_page")
+
+  useEffect(() => {
+    if (pageNumber === null) {
+      setPagination((state) => [...state, 2, 3])
+    } else {
+      let paginationArrayAdd = [] as Array<number>
+      for (let i = 2; i <= Number(pageNumber); i++) {
+        paginationArrayAdd.push(i)
+      }
+      setPagination((state) => [...state, ...paginationArrayAdd])
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <ul className={pagination.inner}>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useAppDispatch } from "../../store/hook/dispatch"
 import newss from "./index.module.css"
 import search from "./../../assets/images/news/search.svg"

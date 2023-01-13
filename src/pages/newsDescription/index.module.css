@@ -15,6 +15,16 @@
   color: #664ef9;
   font-size: 14px;
   font-family: "Medium";
+  position: relative;
+}
+.data::after {
+  content: "";
+  position: absolute;
+  background-image: url(../../assets/images/news/svg/points.svg);
+  width: 68px;
+  height: 62px;
+  left: -116px;
+  bottom: -220px;
 }
 .icons {
   display: flex;
