@@ -14,8 +14,8 @@ const Pagination = () => {
     let paginationArrayAdd = [] as Array<number>
     for (let i = 1; i <= Number(pageNumber) + 2; i++) {
       paginationArrayAdd.push(i)
+      if (paginationArrayAdd.length > 15) break
     }
-    if (paginationArrayAdd.length > 15) paginationArrayAdd.length = 15
     setPagination((state) => [...state, ...paginationArrayAdd])
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -23,23 +23,24 @@ const Pagination = () => {
   return (
     <ul className={pagination.inner}>
       {paginationArray.map((element) => (
-        <Link
-          to={`/news?_page=${element}`}
-          key={Math.random()}
-          className={classnames(
-            pagination.paginationElement,
-            `/news?_page=${element}` === `/news?_page=${pageNumber}`
-              ? pagination.active
-              : null
-          )}
-          onClick={() => {
-            onAddNumberPagination(element, paginationArray, setPagination)
-          }}
-        >
-          {element}
-        </Link>
+        <li key={Math.random()}>
+          <Link
+            to={`/news?_page=${element}`}
+            className={classnames(
+              pagination.paginationElement,
+              `/news?_page=${element}` === `/news?_page=${pageNumber}`
+                ? pagination.active
+                : null
+            )}
+            onClick={() => {
+              onAddNumberPagination(element, paginationArray, setPagination)
+            }}
+          >
+            {element}
+          </Link>
+        </li>
       ))}
-      <li className={pagination.paginationElement}>...</li>
+      <li className={pagination.paginationElementContinue}>...</li>
     </ul>
   )
 }
