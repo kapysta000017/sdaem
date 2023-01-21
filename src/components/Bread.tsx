@@ -26,11 +26,7 @@ export default function Bread() {
     <div className={bread.inner}>
       <img src={home} alt="home" />
       {breadCrumb.map((element) => (
-        <Link
-          to={element.link === "/news" ? "/news?_page=1" : element.link}
-          className={bread.element}
-          key={Math.random()}
-        >
+        <Link to={element.link} className={bread.element} key={Math.random()}>
           {element.name}
         </Link>
       ))}
