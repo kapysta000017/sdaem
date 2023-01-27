@@ -1,0 +1,40 @@
+.inner {
+  position: relative;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.inner::after {
+  position: absolute;
+  content: "";
+  background: rgba(102, 78, 249, 1);
+  height: 68px;
+  width: 1px;
+  right: -20px;
+  top: -25px;
+  opacity: 0.1;
+}
+.priceInput {
+  border-radius: 20px;
+  width: 80px;
+  height: 37px;
+  padding: 10px 8px 10px 14px;
+  border: 0px solid transparent;
+  outline: none;
+  font-size: 14px;
+  color: #686868;
+  font-family: "Medium";
+  background: #f8f8f8;
+  cursor: default;
+}
+.priceInput:hover {
+  background: rgba(102, 78, 249, 0.05);
+}
+.priceInput::-webkit-outer-spin-button,
+.priceInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.pricesBetween {
+  color: #4e64f9;
+}
