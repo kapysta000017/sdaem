@@ -1,0 +1,21 @@
+.inner {
+  padding: 10px 40px 10px 16px;
+  background: #ffd54f;
+  border-radius: 22px;
+  color: #242424;
+  font-size: 14px;
+  font-family: "Bold";
+  position: relative;
+}
+.innerDisabled {
+  pointer-events: none;
+}
+.inner:hover {
+  background: #fec100;
+}
+.arrow {
+  position: absolute;
+  content: "";
+  top: 13px;
+  right: 22px;
+}
