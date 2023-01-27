@@ -22,7 +22,7 @@ export default function Navigation() {
                   )
                 : navigation.listInfoItem
             }}
-            to="/"
+            to="/main?category=flats"
           >
             Главная
           </NavLink>

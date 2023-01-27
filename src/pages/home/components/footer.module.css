@@ -59,6 +59,9 @@
   color: black;
   margin-bottom: 4px;
 }
+.linkFlat {
+  margin-bottom: 13px;
+}
 .linkGray {
   color: #8291a3;
 }
@@ -74,6 +77,9 @@
 .facebook {
   width: 24px;
 }
-.linkFlat {
-  margin-bottom: 13px;
+.listCities {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 53px;
+  row-gap: 8px;
 }

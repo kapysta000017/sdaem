@@ -11,8 +11,11 @@ import webpay from "./../../../assets/images/footer/webpay.svg"
 import visa from "./../../../assets/images/footer/visa.svg"
 import { Link } from "react-router-dom"
 import classnames from "classnames"
+import { useAppSelector } from "../../../store/hook/selector"
 
 export default function Footer() {
+  const citiesList = useAppSelector((state) => state.hotels.citiesListFooter)
+
   return (
     <footer className={footer.inner}>
       <div className={footer.info}>
@@ -41,30 +44,23 @@ export default function Footer() {
               Авто на прокат
             </Link>
           </div>
-          <div className={footer.list}>
+          <div className={classnames(footer.list)}>
             <div className={classnames(footer.linkBold, footer.linkFlat)}>
               Квартиры
             </div>
-            <Link to="/minsk" className={footer.linkGray}>
-              Квартиры в Минске
-            </Link>
-            <Link to="/gomel" className={footer.linkGray}>
-              Квартиры в Гомеле
-            </Link>
-            <Link to="/brest" className={footer.linkGray}>
-              Квартиры в Бресте
-            </Link>
-          </div>
-          <div className={classnames(footer.list, footer.listPosition)}>
-            <Link to="/minsk" className={footer.linkGray}>
-              Квартиры в Минске
-            </Link>
-            <Link to="/gomel" className={footer.linkGray}>
-              Квартиры в Гомеле
-            </Link>
-            <Link to="/brest" className={footer.linkGray}>
-              Квартиры в Бресте
-            </Link>
+            <div className={footer.listCities}>
+              {citiesList.map((element) => {
+                return (
+                  <Link
+                    to={`/hotels?city=${element}`}
+                    className={footer.linkGray}
+                    key={Math.random()}
+                  >
+                    {`Квартиры в ${element}`}
+                  </Link>
+                )
+              })}
+            </div>
           </div>
           <div className={classnames(footer.list, footer.listPosition)}>
             <Link to="/news" className={footer.linkGray}>
