@@ -11,6 +11,8 @@ import NewsDescription from "./pages/newsDescription"
 import RegistrationMessage from "./pages/registrationMessage"
 import { Provider } from "react-redux"
 import store from "./store"
+import Main from "./pages/main"
+import Hotels from "./pages/hotels"
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 
@@ -37,14 +39,16 @@ const router = createBrowserRouter([
         element: <NewsDescription />,
       },
       {
-        path: "price",
-      },
-      {
-        path: "map",
+        path: "hotels",
+        element: <Hotels />,
       },
       {
         path: "contacts",
         element: <Contact />,
+      },
+      {
+        path: "main",
+        element: <Main />,
       },
     ],
   },

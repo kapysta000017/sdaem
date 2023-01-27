@@ -11,10 +11,10 @@ import { useSearchParams } from "react-router-dom"
 export default function News() {
   const dispatch = useAppDispatch()
   const [searchParams, setSearchParams] = useSearchParams()
-  let pageNumber = searchParams.get("_page")
+  const pageNumber = searchParams.get("_page")
 
   useEffect(() => {
-    dispatch(updateBread({ name: "Новости", link: "/news" }))
+    dispatch(updateBread({ name: "Новости", link: "/news?_page=1" }))
   }, [dispatch])
 
   const submit = (e: React.SyntheticEvent) => {
