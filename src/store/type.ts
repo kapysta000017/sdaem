@@ -1,4 +1,63 @@
-import store from "."
+export type Option = {
+  name: string
+  params: string
+  id: string
+}
+export type StoreOption = {
+  options: Array<Option>
+  status: string
+  error: null | string
+}
 
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
+type ContactHotel = {
+  name: string
+  phone: string
+  email: string
+  avatar: string
+}
+export type Flat = {
+  price: string
+  city: string
+  rooms: string
+  street: string
+  are: number
+  contact: Array<ContactHotel>
+  district: string
+  id: string
+  like: boolean
+  sleep: string
+  text: string
+  underground: string
+  gascooker: boolean
+  oven: boolean
+  percolator: boolean
+  microwave: boolean
+  crockery: boolean
+  dishwasher: boolean
+}
+
+export type DefaultInputValues = {
+  city: string
+  rooms?: string
+  priceFrom: string
+  priceTo: string
+  differentPrice: string | number
+  sleep: string
+  underground: string
+  district: string
+}
+export type InputValues = {
+  gascooker: boolean
+  oven: boolean
+  percolator: boolean
+  microwave: boolean
+  crockery: boolean
+  dishwasher: boolean
+} & DefaultInputValues
+
+export type ControlCheckbox = {
+  check: boolean
+  name: string
+  params: string
+  id: string
+}

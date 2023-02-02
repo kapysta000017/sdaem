@@ -12,7 +12,7 @@ import RegistrationMessage from "./pages/registrationMessage"
 import { Provider } from "react-redux"
 import store from "./store"
 import Main from "./pages/main"
-import Hotels from "./pages/hotels"
+import Flats from "./pages/flats"
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 
@@ -39,8 +39,8 @@ const router = createBrowserRouter([
         element: <NewsDescription />,
       },
       {
-        path: "hotels",
-        element: <Hotels />,
+        path: "flats",
+        element: <Flats />,
       },
       {
         path: "contacts",
