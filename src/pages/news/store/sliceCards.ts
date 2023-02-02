@@ -1,4 +1,4 @@
-import { RootState } from "../../../store/type"
+import { RootState } from "../../../store/typeHook"
 import {
   createAsyncThunk,
   createEntityAdapter,

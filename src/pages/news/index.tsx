@@ -4,7 +4,7 @@ import newss from "./index.module.css"
 import search from "./../../assets/images/news/search.svg"
 import Cards from "../../components/Cards"
 import Bread from "../../components/Bread"
-import { updateBread } from "./store/sliceBread"
+import { updateBread } from "../../components/stores/sliceBread"
 import Pagination from "../../components/Pagination"
 import { useSearchParams } from "react-router-dom"
 
