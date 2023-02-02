@@ -14,12 +14,14 @@ import classnames from "classnames"
 import { useAppSelector } from "../../../store/hook/selector"
 
 export default function Footer() {
-  const citiesList = useAppSelector((state) => state.hotels.citiesListFooter)
+  const citiesList = useAppSelector(
+    (state) => state.flats.citiesListFooterHeader
+  )
 
   return (
     <footer className={footer.inner}>
       <div className={footer.info}>
-        <Link to="/">
+        <Link to="/main?category=flats">
           <img src={logo} alt="logo" className={footer.logo} />
         </Link>
         <span className={footer.logoText}>СДАЁМ БАЙ</span>
@@ -52,11 +54,11 @@ export default function Footer() {
               {citiesList.map((element) => {
                 return (
                   <Link
-                    to={`/hotels?city=${element}`}
+                    to={`/flats?city=${element}`}
                     className={footer.linkGray}
                     key={Math.random()}
                   >
-                    {`Квартиры в ${element}`}
+                    {`Квартиры ${element}`}
                   </Link>
                 )
               })}

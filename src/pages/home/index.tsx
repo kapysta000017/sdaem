@@ -2,15 +2,18 @@ import Navigation from "./components/Navigation"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import { Outlet } from "react-router-dom"
-import { useAppDispatch } from "../../store/hook/dispatch"
 import { useEffect } from "react"
-import { fetchAllHotel } from "./../main/store/sliceMainFlats"
+import { useNavigate, useLocation } from "react-router-dom"
 
 export default function Home() {
-  const dispatch = useAppDispatch()
+  const location = useLocation()
+  const navigate = useNavigate()
+
   useEffect(() => {
-    dispatch(fetchAllHotel())
-  }, [dispatch])
+    location.pathname === "/" &&
+      navigate("/main?category=flats", { replace: true })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <>

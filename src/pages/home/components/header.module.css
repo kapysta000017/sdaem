@@ -41,6 +41,19 @@
   position: relative;
   padding-right: 15px;
 }
+.itemActive {
+  position: relative;
+}
+.itemActive::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #ffd54f;
+  left: 0px;
+  bottom: -30px;
+}
+
 .itemMap::after {
   position: absolute;
   content: "";
@@ -49,4 +62,38 @@
   height: 15px;
   width: 15px;
   right: -15px;
+}
+.downContent {
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  min-width: 150px;
+  z-index: 1;
+  box-shadow: 0px 0px 40px rgba(135, 124, 202, 0.3);
+  border-radius: 10px;
+  top: 48px;
+  font-size: 14px;
+  color: #1e2123;
+  font-family: "Medium";
+  cursor: default;
+}
+.downElement {
+  padding: 10px 10px 10px 15px;
+  display: block;
+  color: #1e2123;
+}
+.downElement:first-child {
+  border-radius: 10px 10px 0px 0px;
+}
+.downElement:last-child {
+  border-radius: 0px 0px 10px 10px;
+}
+.downElement:hover {
+  background: #f8f8f8;
+}
+.showLinksDrop {
+  display: block !important;
+}
+.itemDrop {
+  cursor: default;
 }
