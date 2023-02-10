@@ -1,14 +1,14 @@
 .inner {
   padding: 10px 40px 10px 16px;
-  background: #ffd54f;
+  background: #664ef9;
   border-radius: 22px;
-  color: #242424;
+  color: #ffffff;
   font-size: 14px;
   font-family: "Bold";
   position: relative;
 }
 .inner:hover {
-  background: #fec100;
+  background: #5c35f9;
   transition: 0.15s;
 }
 .arrow {

@@ -51,6 +51,12 @@
 .downElement {
   padding: 10px 10px 10px 15px;
 }
+.downElement:last-child {
+  border-radius: 0px 0px 10px 10px;
+}
+.downElement:first-child {
+  border-radius: 10px 10px 0px 0px;
+}
 .downElement:hover {
   background: #f8f8f8;
 }

@@ -1,12 +1,15 @@
 import drop from "./dropDown.module.css"
-import { useEffect, useRef } from "react"
+import { useEffect } from "react"
 import { useSearchParams } from "react-router-dom"
-import { DefaultInputValues, InputValues } from "../pages/main/store/type"
+import { DefaultInputValues, InputValues } from "../store/type"
 
 const DropDown: React.FC<{
   id: string
   citiesList?: Array<string>
   roomsList?: Array<string>
+  districtList?: Array<string>
+  sleepList?: Array<string>
+  undergroundList?: Array<string>
   style?: React.CSSProperties
   formInputValues: DefaultInputValues | InputValues
   setFormInputValues: React.Dispatch<
@@ -16,6 +19,9 @@ const DropDown: React.FC<{
   id,
   citiesList,
   roomsList,
+  districtList,
+  sleepList,
+  undergroundList,
   style,
   formInputValues,
   setFormInputValues,
@@ -23,24 +29,15 @@ const DropDown: React.FC<{
   const [searchParams, setSearchParams] = useSearchParams()
   const categoryParams = searchParams.get("category")
 
-  const boofArray = useRef<Array<string>>([])
   useEffect(() => {
     const dropdownElements = document.getElementById(id)
     dropdownElements?.classList.remove(drop.show)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoryParams])
 
   const onClickShowDownContent = (event: Event) => {
     const target = event.target as typeof event.target
     const element = target as HTMLElement
-    const parentElement = element.parentElement
-    const dropDown = parentElement?.childNodes[1] as HTMLElement
-    const idDrop = dropDown?.id
-    if (idDrop) {
-      boofArray.current.push(idDrop)
-    }
     if (!element.matches(`.${drop.dropbtn}`)) {
-      const id = boofArray.current.pop() as string
       const dropdownElements = document.getElementById(id)
       dropdownElements?.classList.remove(drop.show)
     }
@@ -52,7 +49,7 @@ const DropDown: React.FC<{
   }, [])
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", marginTop: "11px", zIndex: "5" }}>
       <button
         className={drop.dropbtn}
         onClick={() => document.getElementById(id)!.classList.toggle(drop.show)}
@@ -60,6 +57,9 @@ const DropDown: React.FC<{
       >
         {typeof citiesList === "object" && formInputValues.city}
         {typeof roomsList === "object" && formInputValues.rooms}
+        {typeof districtList === "object" && formInputValues.district}
+        {typeof undergroundList === "object" && formInputValues.underground}
+        {typeof sleepList === "object" && formInputValues.sleep}
       </button>
       <div id={id} className={drop.downContent}>
         {typeof citiesList === "object" &&
@@ -84,6 +84,57 @@ const DropDown: React.FC<{
                 className={drop.downElement}
                 onClick={() =>
                   setFormInputValues((state) => ({ ...state, rooms: element }))
+                }
+              >
+                {element}
+              </div>
+            )
+          })}
+        {typeof districtList === "object" &&
+          districtList.map((element) => {
+            return (
+              <div
+                key={Math.random()}
+                className={drop.downElement}
+                onClick={() =>
+                  setFormInputValues((state) => ({
+                    ...state,
+                    district: element,
+                  }))
+                }
+              >
+                {element}
+              </div>
+            )
+          })}
+        {typeof sleepList === "object" &&
+          sleepList.map((element) => {
+            return (
+              <div
+                key={Math.random()}
+                className={drop.downElement}
+                onClick={() =>
+                  setFormInputValues((state) => ({
+                    ...state,
+                    sleep: element,
+                  }))
+                }
+              >
+                {element}
+              </div>
+            )
+          })}
+        {typeof undergroundList === "object" &&
+          undergroundList.map((element) => {
+            return (
+              <div
+                key={Math.random()}
+                className={drop.downElement}
+                onClick={() =>
+                  setFormInputValues((state) => ({
+                    ...state,
+                    underground: element,
+                  }))
                 }
               >
                 {element}

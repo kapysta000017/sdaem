@@ -1,35 +1,30 @@
-import classnames from "classnames"
-import { useSearchParams } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 import iconOption from "./../assets/images/main/option.svg"
 import option from "./showOption.module.css"
 
 export default function ShowOption() {
-  const [searchParams, setSearchParams] = useSearchParams()
-  const optionParams = searchParams.get("option")
-  const categoryParams = searchParams.get("category")
+  const location = useLocation()
 
   const addMoreOption = () => {
-    if (optionParams === "false" || optionParams === null) {
-      setSearchParams({
-        category: categoryParams as string,
-        option: "true",
-      })
-    } else {
-      setSearchParams({
-        category: categoryParams as string,
-        option: "false",
-      })
-    }
+    location.pathname === "/flats" &&
+      document
+        .getElementById("searchFlat")!
+        .classList.toggle(option.searchFlatShadow)
+
+    location.pathname === "/main" &&
+      document
+        .querySelector(`.${option.inner}`)!
+        .classList.toggle(option.innerChoose)
+    location.pathname === "/flats" &&
+      document
+        .querySelector(`.${option.inner}`)!
+        .classList.toggle(option.innerChooseBelow)
+
+    document.getElementById("option")?.classList.toggle(option.optionToggle)
   }
 
   return (
-    <div
-      className={classnames(
-        option.inner,
-        optionParams === "true" && option.innerChoose
-      )}
-      onClick={addMoreOption}
-    >
+    <div className={option.inner} onClick={addMoreOption}>
       Больше опций
       <img src={iconOption} alt="option" />
     </div>

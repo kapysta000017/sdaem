@@ -1,5 +1,5 @@
 import price from "./price.module.css"
-import { DefaultInputValues, InputValues } from "../pages/main/store/type"
+import { DefaultInputValues, InputValues } from "../store/type"
 
 export default function Price({
   setFormInputValues,

@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom"
-import linkStyle from "./linkGold.module.css"
-import { ReactComponent as ArrowSvg } from "./../assets/images/main/arrowBlack.svg"
 import { ReactNode } from "react"
+import linkStyle from "./linkPurple.module.css"
+import { ReactComponent as ArrowSvg } from "./../assets/images/flats/arrow.svg"
 
-const LinkComponent: React.FC<{
+const LinkPurple: React.FC<{
   to: string
   children: ReactNode
   style?: React.CSSProperties
-}> = ({ to, style, children }) => {
+}> = ({ to, children, style }) => {
   return (
     <Link to={to} className={linkStyle.inner} style={style}>
       {children}
@@ -15,4 +15,4 @@ const LinkComponent: React.FC<{
     </Link>
   )
 }
-export default LinkComponent
+export default LinkPurple

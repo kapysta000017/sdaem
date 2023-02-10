@@ -5,9 +5,10 @@ import home from "./../assets/images/news/home.svg"
 import { useAppSelector } from "../store/hook/selector"
 import { IBread } from "../pages/news/store/type"
 import { useAppDispatch } from "../store/hook/dispatch"
-import { fetchOneNewsBread } from "../pages/news/store/sliceBread"
+import { fetchOneNewsBread } from "./stores/sliceBread"
+import { updateBread } from "./stores/sliceBread"
 
-export default function Bread() {
+export default function Bread({ cityName }: { cityName?: string }) {
   const breadCrumb = useAppSelector(
     (state) => state.bread.bread
   ) as Array<IBread>
@@ -19,9 +20,26 @@ export default function Bread() {
     id && dispatch(fetchOneNewsBread(id))
   }, [dispatch, id])
 
+  useEffect(() => {
+    cityName === ""
+      ? dispatch(
+          updateBread({
+            name: "Квартиры",
+            link: `/flats?city=${cityName}&kind=tile&_page=1`,
+          })
+        )
+      : dispatch(
+          updateBread({
+            name: cityName,
+            link: `/flats?city=${cityName}&kind=tile&_page=1`,
+          })
+        )
+  }, [cityName])
+
   if (status) {
     return <div className={bread.inner}>loading...</div>
   }
+
   return (
     <div className={bread.inner}>
       <img src={home} alt="home" />

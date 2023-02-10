@@ -1,6 +1,6 @@
 import pagination from "./pagination.module.css"
 import classnames from "classnames"
-import { Link, useSearchParams } from "react-router-dom"
+import { useSearchParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import onAddNumberPagination from "./logicPagination/addNumberPagination"
 import { IPagination } from "./typePagination/arrayNumber"
@@ -17,15 +17,13 @@ const Pagination = () => {
       if (paginationArrayAdd.length > 15) break
     }
     setPagination((state) => [...state, ...paginationArrayAdd])
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
     <ul className={pagination.inner}>
       {paginationArray.map((element) => (
         <li key={Math.random()}>
-          <Link
-            to={`/news?_page=${element}`}
+          <div
             className={classnames(
               pagination.paginationElement,
               `/news?_page=${element}` === `/news?_page=${pageNumber}`
@@ -33,11 +31,13 @@ const Pagination = () => {
                 : null
             )}
             onClick={() => {
+              searchParams.set("_page", String(element))
+              setSearchParams(searchParams)
               onAddNumberPagination(element, paginationArray, setPagination)
             }}
           >
             {element}
-          </Link>
+          </div>
         </li>
       ))}
       <li className={pagination.paginationElementContinue}>...</li>

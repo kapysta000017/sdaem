@@ -8,6 +8,7 @@
   font-size: 18px;
   font-family: "Regular";
   position: relative;
+  cursor: default;
 }
 .paginationElement:hover::before {
   position: absolute;
@@ -17,6 +18,7 @@
   background: #e4e2e2;
   left: 0px;
   bottom: -2px;
+  transition: 0.15s;
 }
 .paginationElementContinue {
   color: #686868;

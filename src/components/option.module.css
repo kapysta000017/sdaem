@@ -1,8 +1,12 @@
 .inner {
-  padding: 20px 34px 30px 20px;
-  background: #ffffff;
-  border-top: 1px solid rgba(78, 100, 249, 0.1);
   box-shadow: 0px 20px 40px rgba(135, 124, 202, 0.15);
+  border-top: 1px solid rgba(78, 100, 249, 0.1);
+  background: #ffffff;
+  display: none;
+}
+.containerMoreOption {
+  padding: 20px 34px 10px 0px;
+  background: #ffffff;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 10px;
@@ -27,6 +31,7 @@
   font-family: "Regular";
   color: #1e2123;
   font-size: 14px;
+  position: relative;
 }
 .defaultCheckbox:hover + .styleCheckbox {
   background: rgba(102, 78, 249, 0.1);
@@ -57,4 +62,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-repeat: no-repeat;
+}
+.containerDropDown {
+  display: flex;
+  gap: 48px;
+  background: #ffffff;
+}
+.labelDrop {
+  font-family: "Medium";
+  font-size: 14px;
+  color: #664ef9;
+  margin-right: 20px;
+}
+.labelDropMain {
+  color: #bdbdbd;
 }
