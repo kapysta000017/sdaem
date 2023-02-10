@@ -22,6 +22,16 @@
   background: white;
   border-color: rgba(102, 78, 249, 0.8);
 }
+.inputError {
+  padding: 15px 15px 15px 52px;
+  border-radius: 30px;
+  background: #f8f8f8;
+  border: 2px solid rgba(235, 87, 87, 1);
+  outline: none;
+  font-family: "Medium";
+  cursor: default;
+  font-size: 14px;
+}
 .icon {
   position: absolute;
   left: 20px;
@@ -29,4 +39,9 @@
 .icon:hover + .input {
   background: white;
   border-color: rgba(102, 78, 249, 0.8);
+}
+.iconError {
+  position: absolute;
+  right: 20px;
+  top: 0;
 }

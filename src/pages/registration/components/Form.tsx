@@ -7,29 +7,38 @@ import {
 import Input from "../../../components/Input"
 import Button from "../../../components/Button"
 import ReCAPTCHA from "react-google-recaptcha"
-import React, { useRef } from "react"
+import { useRef, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
+import { useForm, SubmitHandler, FieldErrors } from "react-hook-form"
+import { Inputs } from "../../../typeInputForm/type"
+import MessageError from "./MessageError"
 
 export default function Form() {
   const captchaRef = useRef(null!)
   const navigate = useNavigate()
+  const {
+    handleSubmit,
+    reset,
+    register,
+    formState: { errors },
+    setError,
+    watch,
+    clearErrors,
+  } = useForm<Inputs>({ mode: "onBlur" })
 
-  const submit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    const target = e.target as typeof e.target & {
-      login: { value: string }
-      email: { value: string }
-      password: { value: string }
-      repeatpassword: { value: string }
+  const watchPassword = watch("password")
+  const watchRepeatpassWord = watch("repeatpassword")
+
+  useEffect(() => {
+    if (watchPassword !== watchRepeatpassWord) {
+      setError("customError", { type: "custom" })
+    } else {
+      clearErrors("customError")
     }
-    console.log(
-      target.login.value,
-      target.email.value,
-      target.password.value,
-      target.repeatpassword.value
-    )
-    const reset = e.target as HTMLFormElement
+  }, [watchPassword, watchRepeatpassWord])
 
+  const submit: SubmitHandler<Inputs> = (data) => {
+    console.log(data.email, data.login, data.password, data.repeatpassword)
     const captch = captchaRef.current as {
       getValue(): string | null
       reset(): void
@@ -37,13 +46,12 @@ export default function Form() {
     const token = captch.getValue()
     console.log(token)
     captch.reset()
-
-    reset.reset()
+    reset()
     navigate("/registration/message", { replace: true })
   }
 
   return (
-    <form autoComplete="off" onSubmit={submit}>
+    <form autoComplete="off" onSubmit={handleSubmit(submit)}>
       <h5 className={form.title}>Регистрация</h5>
       <div className={form.containerInput}>
         <Input
@@ -52,15 +60,19 @@ export default function Form() {
           placeholder="Логин"
           style={{ width: "305px" }}
           child={componentUserIcon}
+          register={register}
+          error={errors.login as FieldErrors<Inputs>}
         />
       </div>
       <div className={form.containerEmail}>
         <Input
-          type="email"
+          type="text"
           name="email"
           placeholder="Электронная почта"
           style={{ width: "305px" }}
           child={componentMailIconRegistration}
+          register={register}
+          error={errors.email as FieldErrors<Inputs>}
         />
       </div>
       <div className={form.containerPassword}>
@@ -70,6 +82,8 @@ export default function Form() {
           placeholder="Пароль"
           style={{ width: "305px" }}
           child={componentPasswordIcon}
+          register={register}
+          error={errors.password as FieldErrors<Inputs>}
         />
       </div>
       <div className={form.containerRepeatPassword}>
@@ -79,6 +93,8 @@ export default function Form() {
           placeholder="Повторите пароль"
           style={{ width: "305px" }}
           child={componentPasswordIcon}
+          register={register}
+          error={errors.customError as FieldErrors<Inputs>}
         />
       </div>
       <ReCAPTCHA
@@ -86,6 +102,14 @@ export default function Form() {
         className={form.captch}
         ref={captchaRef}
       />
+
+      {errors.email ||
+      errors.login ||
+      errors.password ||
+      errors.repeatpassword ||
+      errors.customError ? (
+        <MessageError />
+      ) : null}
       <Button style={{ width: "305px" }}>Зарегистрироваться</Button>
     </form>
   )

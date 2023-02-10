@@ -35,6 +35,21 @@
   border-color: rgba(102, 78, 249, 0.8);
   background: white;
 }
+.messageError {
+  font-family: "Medium";
+  padding: 15px 20px;
+  border-radius: 30px;
+  background: #f8f8f8;
+  border: 2px solid rgba(235, 87, 87, 1);
+  max-width: 548px;
+  min-width: 548px;
+  height: 200px;
+  outline: none;
+  margin-top: 15px;
+  max-height: 200px;
+  min-height: 200px;
+  cursor: default;
+}
 .button {
   border-radius: 33px;
   border: 0px solid transparent;

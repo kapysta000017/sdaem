@@ -6,27 +6,35 @@ import {
 } from "../../components/componentIcon"
 import { Link, useNavigate } from "react-router-dom"
 import Button from "../../components/Button"
+import { useForm, SubmitHandler, FieldErrors } from "react-hook-form"
+import { Inputs } from "../../typeInputForm/type"
 
 export default function Auth() {
   const navigate = useNavigate()
-  const submit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    const target = e.target as typeof e.target & {
-      name: { value: string }
-      password: { value: string }
-    }
-    const reset = e.target as HTMLFormElement
-    console.log(target.name.value, target.password.value)
+  const {
+    handleSubmit,
+    reset,
+    register,
+    formState: { errors },
+  } = useForm<Inputs>({
+    mode: "onBlur",
+  })
 
+  const submit: SubmitHandler<Inputs> = (data) => {
+    console.log(data.login, data.password)
     navigate("/", { replace: true })
 
-    localStorage.setItem("name", target.name.value)
-    reset.reset()
+    localStorage.setItem("name", data.login)
+    reset()
   }
 
   return (
     <div className={auth.inner}>
-      <form autoComplete="off" className={auth.container} onSubmit={submit}>
+      <form
+        autoComplete="off"
+        className={auth.container}
+        onSubmit={handleSubmit(submit)}
+      >
         <h5 className={auth.title}>Авторизация</h5>
         <div className={auth.text}>
           Авторизируйтесь, чтобы начать публиковать свои объявления
@@ -36,8 +44,10 @@ export default function Auth() {
             child={componentUserIcon}
             placeholder="Логин"
             type="text"
-            name="name"
+            name="login"
             style={{ width: "305px" }}
+            register={register}
+            error={errors.login as FieldErrors<Inputs>}
           />
         </div>
         <div className={auth.labelContainer}>
@@ -47,6 +57,8 @@ export default function Auth() {
             type="password"
             name="password"
             style={{ width: "305px" }}
+            register={register}
+            error={errors.password as FieldErrors<Inputs>}
           />
         </div>
         <div className={auth.passwordInfo}>
