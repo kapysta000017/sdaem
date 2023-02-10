@@ -23,8 +23,30 @@ export const fetchAllFlats = createAsyncThunk(
   "mainPage/fetchAllFlats",
   async (_, { rejectWithValue }) => {
     try {
-      const hotels = await axios("http://localhost:3001/hotel")
-      return hotels.data
+      const flats = await axios("http://localhost:3001/flats")
+      return flats.data
+    } catch (error) {
+      const e = error as Error
+      const message = e.message
+      return rejectWithValue(message)
+    }
+  }
+)
+
+export const fetchUpdateFlat = createAsyncThunk(
+  "flats/fetchUpdateFlatLike",
+  async (element: Flat, { rejectWithValue }) => {
+    try {
+      const flats = await axios(
+        `https://jsonplaceholder.typicode.com/posts/${element.id}`,
+        {
+          method: "PUT",
+          data: {
+            ...element,
+          },
+        }
+      )
+      return flats.data
     } catch (error) {
       const e = error as Error
       const message = e.message
@@ -87,6 +109,9 @@ const slice = createSlice({
     })
     builder.addCase(fetchAllFlats.rejected, (state, action) => {
       state.error = action.payload as string
+    })
+    builder.addCase(fetchUpdateFlat.fulfilled, (state, action) => {
+      adapter.upsertOne(state, action.payload)
     })
   },
 })

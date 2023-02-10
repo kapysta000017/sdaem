@@ -9,7 +9,7 @@ export type StoreOption = {
   error: null | string
 }
 
-type ContactHotel = {
+export type ContactFlat = {
   name: string
   phone: string
   email: string
@@ -20,13 +20,14 @@ export type Flat = {
   city: string
   rooms: string
   street: string
-  are: number
-  contact: Array<ContactHotel>
+  area: number
+  contactUser: ContactFlat
   district: string
   id: string
   like: boolean
   sleep: string
   text: string
+  img: Array<string>
   underground: string
   gascooker: boolean
   oven: boolean
@@ -37,22 +38,22 @@ export type Flat = {
 }
 
 export type DefaultInputValues = {
-  city: string
+  city?: string
   rooms?: string
-  priceFrom: string
-  priceTo: string
-  differentPrice: string | number
-  sleep: string
+  priceFrom?: string
+  priceTo?: string
+  differentPrice?: string | number
+  sleep?: string
   underground: string
   district: string
 }
 export type InputValues = {
-  gascooker: boolean
-  oven: boolean
-  percolator: boolean
-  microwave: boolean
-  crockery: boolean
-  dishwasher: boolean
+  gascooker?: boolean
+  oven?: boolean
+  percolator?: boolean
+  microwave?: boolean
+  crockery?: boolean
+  dishwasher?: boolean
 } & DefaultInputValues
 
 export type ControlCheckbox = {
