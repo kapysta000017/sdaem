@@ -1,0 +1,15 @@
+.listRooms {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  cursor: default;
+  flex-wrap: wrap;
+}
+.room {
+  padding: 6px 10px;
+  color: #664ef9;
+  font-size: 14px;
+  font-family: "Regular";
+  background: rgba(102, 78, 249, 0.1);
+  border-radius: 17px;
+}

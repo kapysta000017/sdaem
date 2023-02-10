@@ -1,5 +1,5 @@
 import message from "./index.module.css"
-import Button from "../../components/Buttonn"
+import Button from "../../components/Button"
 import { useNavigate } from "react-router-dom"
 
 export default function RegistrationMessage() {

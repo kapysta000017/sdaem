@@ -1,0 +1,125 @@
+.container {
+  background: white;
+  filter: drop-shadow(0px 20px 40px rgba(135, 124, 202, 0.15));
+  border-radius: 10px;
+  width: 406px;
+}
+.img {
+  width: 406px;
+  height: 226px;
+  border-radius: 10px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 309px;
+  padding: 21px 19px;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+.price {
+  color: #664ef9;
+  font-size: 20px;
+  font-family: "Bold";
+  position: relative;
+}
+.price::after {
+  position: absolute;
+  content: "за сутки";
+  left: 0px;
+  bottom: -11px;
+  color: #bdbdbd;
+  font-size: 14px;
+  font-family: "Regular";
+}
+.sleepRooms {
+  display: flex;
+  gap: 20px;
+  color: #686868;
+  font-size: 14px;
+  font-family: "Medium";
+  cursor: default;
+}
+.sleep {
+  display: flex;
+  gap: 7px;
+  padding: 8px;
+  background: #f8f8f8;
+  border-radius: 18px;
+}
+.rooms {
+  padding: 8px;
+  background: #f8f8f8;
+  border-radius: 18px;
+}
+.place {
+  margin-top: 34px;
+  margin-bottom: 21px;
+  color: #000000;
+  font-size: 16px;
+  font-family: "Medium";
+}
+.street {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 11px;
+}
+.underground {
+  display: flex;
+  gap: 6px;
+}
+.undergroundText {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.district {
+  display: flex;
+  gap: 6px;
+}
+.districtText {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.undergroundDistrict {
+  display: flex;
+  gap: 30px;
+}
+.text {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  color: #686868;
+  font-size: 12px;
+  font-family: "Regular";
+  margin-bottom: 26px;
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.actions::after {
+  position: absolute;
+  content: "";
+  width: 367px;
+  height: 1px;
+  background: rgba(78, 100, 249, 1);
+  bottom: 66px;
+  opacity: 0.1;
+}
+.area {
+  padding: 8px;
+  background: #f8f8f8;
+  border-radius: 18px;
+}
+.swiperPointTile {
+  --swiper-theme-color: white;
+  --swiper-pagination-bullet-inactive-color: #c5c5c5;
+}

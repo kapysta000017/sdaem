@@ -1,0 +1,19 @@
+.toggleOnMap {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  cursor: default;
+  color: #1e2123;
+  font-size: 14px;
+  font-family: "Semi Bold";
+  width: 190px;
+  height: 37px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+  padding: 10px 18px 10px 43px;
+  background: #ffffff;
+}
+.svg {
+  position: absolute;
+  left: 18px;
+}

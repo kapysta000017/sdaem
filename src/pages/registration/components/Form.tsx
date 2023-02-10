@@ -5,7 +5,7 @@ import {
   componentMailIconRegistration,
 } from "../../../components/componentIcon"
 import Input from "../../../components/Input"
-import Button from "../../../components/Buttonn"
+import Button from "../../../components/Button"
 import ReCAPTCHA from "react-google-recaptcha"
 import React, { useRef } from "react"
 import { useNavigate } from "react-router-dom"

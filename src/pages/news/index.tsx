@@ -2,11 +2,12 @@ import { useEffect } from "react"
 import { useAppDispatch } from "../../store/hook/dispatch"
 import newss from "./index.module.css"
 import search from "./../../assets/images/news/search.svg"
-import Cards from "../../components/Cards"
+import Cards from "./components/CardsNews"
 import Bread from "../../components/Bread"
 import { updateBread } from "../../components/stores/sliceBread"
 import Pagination from "../../components/Pagination"
 import { useSearchParams } from "react-router-dom"
+import { fetchAllFlats } from "../../store/sliceMainFlats"
 
 export default function News() {
   const dispatch = useAppDispatch()
@@ -15,6 +16,7 @@ export default function News() {
 
   useEffect(() => {
     dispatch(updateBread({ name: "Новости", link: "/news?_page=1" }))
+    dispatch(fetchAllFlats())
   }, [dispatch])
 
   const submit = (e: React.SyntheticEvent) => {

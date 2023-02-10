@@ -14,7 +14,7 @@ export default function Erorr() {
           Возможно, у вас опечатка в адресе страницы, или её просто не
           существует
         </p>
-        <Link className={error.link} to="/">
+        <Link className={error.link} to="/main?category=flats">
           Вернутся на главную
         </Link>
       </div>

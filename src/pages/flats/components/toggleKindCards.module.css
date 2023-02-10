@@ -1,0 +1,27 @@
+.dropbtn {
+  position: relative;
+  cursor: default;
+  color: #1e2123;
+  font-size: 14px;
+  font-family: "Semi Bold";
+  width: 106px;
+  height: 37px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+  padding: 0px 15px 0px 39px;
+  background: #f8f8f8;
+}
+.dropbtn:hover {
+  background-color: transparent;
+}
+.svg {
+  position: absolute;
+  left: 15px;
+}
+.svgActive * {
+  fill: #664ef9;
+}
+.dropbtnActive {
+  background-color: #ffffff;
+}

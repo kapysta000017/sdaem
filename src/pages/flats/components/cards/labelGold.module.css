@@ -1,0 +1,13 @@
+.inner {
+  position: absolute;
+  color: white;
+  text-shadow: 0px 1px 0px rgba(147, 79, 0, 0.3);
+  font-size: 18px;
+  font-family: "Bold";
+  padding: 7.5px 12px;
+  background: linear-gradient(106.06deg, #ffd54f 1.12%, #fec100 97.96%);
+  border-radius: 0px 10px 10px 10px;
+  right: 0;
+  cursor: default;
+  z-index: 5;
+}

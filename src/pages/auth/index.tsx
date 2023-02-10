@@ -5,7 +5,7 @@ import {
   componentPasswordIcon,
 } from "../../components/componentIcon"
 import { Link, useNavigate } from "react-router-dom"
-import Button from "../../components/Buttonn"
+import Button from "../../components/Button"
 
 export default function Auth() {
   const navigate = useNavigate()

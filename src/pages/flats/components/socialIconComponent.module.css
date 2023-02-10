@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #f4f5fa;
+  border-radius: 50%;
+}
+.container:hover {
+  background: rgba(102, 78, 249, 0.1);
+  transition: 0.2s;
+}
+.container:hover .img * {
+  fill: #664ef9;
+  transition: 0.15s;
+}

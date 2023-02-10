@@ -1,0 +1,73 @@
+.btn {
+  background: white;
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+  border-radius: 18px;
+  padding: 10px 15px;
+  border: 0px solid transparent;
+  color: #664ef9;
+  font-size: 14px;
+  font-family: "Bold";
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.btnBackground {
+  background: #f5f3ff;
+}
+.downContent {
+  display: none;
+  position: absolute;
+  left: -50px;
+  top: -320px;
+  background: #ffffff;
+  z-index: 10;
+  box-shadow: 0px 0px 40px rgba(135, 124, 202, 0.3);
+  border-radius: 10px;
+  color: #1e2123;
+  padding: 22px 40px 26px 40px;
+  text-align: center;
+}
+.show {
+  display: block !important;
+}
+.avatar {
+  border-radius: 50%;
+  width: 59px;
+  height: 59px;
+  margin: 0 auto;
+  border: 4px solid rgba(102, 78, 249, 1);
+  margin-bottom: 11px;
+}
+.user {
+  color: #bdbdbd;
+  font-size: 14px;
+  font-family: "Medium";
+  margin-bottom: 5px;
+}
+.userName {
+  color: #1e2123;
+  font-size: 20px;
+  font-family: "Bold";
+  margin-bottom: 18px;
+}
+.userPhone {
+  color: #1e2123;
+  font-size: 20px;
+  font-family: "Bold";
+  margin-bottom: 15px;
+}
+.userMail {
+  color: #664ef9;
+  font-size: 16px;
+  font-family: "Medium";
+  border-bottom: 1px solid #664ef9;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.userSocial {
+  margin-top: 27px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}

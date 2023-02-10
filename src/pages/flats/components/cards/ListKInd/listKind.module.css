@@ -1,0 +1,120 @@
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+.container {
+  display: flex;
+  gap: 25px;
+  background: white;
+  filter: drop-shadow(0px 20px 40px rgba(135, 124, 202, 0.15));
+  border-radius: 10px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 675px;
+  padding: 19px 25px 0px 0px;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+.rooms {
+  color: #1e2123;
+  font-size: 20px;
+  font-family: "Bold";
+}
+.price {
+  position: relative;
+  color: #664ef9;
+  font-size: 25px;
+  font-family: "Bold";
+}
+.price::after {
+  position: absolute;
+  content: "за сутки";
+  color: #bdbdbd;
+  font-size: 14px;
+  font-family: "Regular";
+  bottom: -15px;
+  right: 0;
+  width: 58px;
+}
+.street {
+  display: flex;
+  gap: 10px;
+  margin-top: 17px;
+  color: #000000;
+  font-size: 16px;
+  font-family: "Medium";
+}
+.details {
+  display: flex;
+  margin-top: 17px;
+  gap: 15px;
+  font-size: 14px;
+  color: #686868;
+  font-family: "Medium";
+  align-items: center;
+  cursor: default;
+}
+.sleep {
+  display: flex;
+  gap: 7px;
+  padding: 8px;
+  background: #f8f8f8;
+  border-radius: 18px;
+}
+.roomsAmount {
+  padding: 8px;
+  background: #f8f8f8;
+  border-radius: 18px;
+}
+.underground {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 8px 14px;
+  background: #f8f8f8;
+  border-radius: 18px;
+}
+.district {
+  padding: 8px 14px;
+  background: #f8f8f8;
+  border-radius: 18px;
+}
+.text {
+  color: #686868;
+  font-size: 14px;
+  font-family: "Regular";
+  margin-top: 17px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.actions {
+  margin-top: 25px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+.swiper {
+  position: relative;
+  width: 558px;
+}
+.containerContactLike {
+  display: flex;
+  gap: 15px;
+}
+.swiperPointTile {
+  --swiper-theme-color: white;
+  --swiper-pagination-bullet-inactive-color: #c5c5c5;
+}

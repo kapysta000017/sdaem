@@ -11,7 +11,8 @@ import whatsapp from "../../assets/images/news/svg/whatsapp.svg"
 import telegram from "../../assets/images/news/svg/telegram.svg"
 import viber from "../../assets/images/news/svg/viber.svg"
 import vk from "../../assets/images/news/svg/vk.svg"
-import Cards from "../../components/Cards"
+import Cards from "../news/components/CardsNews"
+import { fetchAllFlats } from "../../store/sliceMainFlats"
 
 export default function NewsDescription() {
   const dispatch = useAppDispatch()
@@ -21,16 +22,17 @@ export default function NewsDescription() {
 
   useEffect(() => {
     dispatch(fetchOneNews(id))
+    dispatch(fetchAllFlats())
   }, [dispatch, id])
 
   if (error) {
-    return <div className={description.inner}>такой новости нету</div>
+    return <div className={description.inner}>Такой новости нету</div>
   }
   if (status) {
     return <div className={description.inner}>loading...</div>
   }
   return (
-    <div>
+    <article>
       <div className={description.inner}>
         <Bread />
         <h3 className={description.title}>{oneNews.title}</h3>
@@ -107,6 +109,6 @@ export default function NewsDescription() {
           }}
         />
       </div>
-    </div>
+    </article>
   )
 }

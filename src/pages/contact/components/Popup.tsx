@@ -1,6 +1,6 @@
 import popup from "./popup.module.css"
 import ReactDOM from "react-dom"
-import Button from "../../../components/Buttonn"
+import Button from "../../../components/Button"
 
 export default function Popup({
   setIsPopup,

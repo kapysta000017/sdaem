@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px;
+  background-color: rgba(235, 87, 87, 0.1);
+  border-radius: 22px;
+  width: 33px;
+  height: 33px;
+}
+.container:hover .svg {
+  fill: rgba(235, 87, 87, 0.4);
+}

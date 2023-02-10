@@ -1,0 +1,75 @@
+.search {
+  position: relative;
+  padding: 22px 320px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 20px 40px rgba(39, 95, 158, 0.08);
+}
+.labelDrop {
+  font-family: "Medium";
+  font-size: 14px;
+  color: #664ef9;
+  margin-right: 20px;
+}
+.labelPrice {
+  font-family: "Medium";
+  font-size: 14px;
+  color: #664ef9;
+  position: relative;
+}
+.labelPrice::before {
+  content: "";
+  position: absolute;
+  background: rgba(78, 100, 249, 0.1);
+  width: 1px;
+  height: 86px;
+  left: -25px;
+  top: -34px;
+}
+.cleanInput {
+  padding: 10px 16px;
+  color: #1e2123;
+  font-size: 14px;
+  font-family: "Semi Bold";
+  background: #f8f8f8;
+  border-radius: 22px;
+  border: 0px solid transparent;
+  margin-right: 30px;
+  margin-left: 50px;
+}
+.cleanInput:hover {
+  background: #f1f1f1;
+  transition: 0.15s;
+}
+.showOptionContainer {
+  width: 178px;
+  position: relative;
+}
+.showOptionContainer::after {
+  content: "";
+  position: absolute;
+  background: rgba(78, 100, 249, 0.1);
+  width: 1px;
+  height: 86px;
+  right: 0px;
+  top: -34px;
+}
+.showOptionContainer::before {
+  content: "";
+  position: absolute;
+  background: rgba(78, 100, 249, 0.1);
+  width: 1px;
+  height: 86px;
+  left: 0px;
+  top: -34px;
+}
+.containerPrice {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 25px;
+  margin-left: 50px;
+}
+.containerOption {
+  padding: 0px 320px;
+}

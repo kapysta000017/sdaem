@@ -1,0 +1,72 @@
+.dropbtn {
+  cursor: default;
+  color: #1e2123;
+  font-size: 14px;
+  font-family: "Semi Bold";
+  width: 232px;
+  height: 37px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  padding: 0px 82px 0px 32px;
+  background: white;
+  box-shadow: 0px 5px 20px rgba(0, 96, 206, 0.1);
+  position: relative;
+}
+.dropbtn::placeholder {
+  max-width: 20px;
+}
+.dropbtn:focus {
+  border: 2px solid rgba(102, 78, 249, 0.8);
+  background-color: #ffffff;
+}
+.dropbtn:hover {
+  background: rgba(102, 78, 249, 0.1);
+}
+.dropbtn::after {
+  position: absolute;
+  content: "";
+  background-image: url(../../../assets/images/flats/arrowBelow.svg);
+  background-repeat: no-repeat;
+  width: 13px;
+  height: 8px;
+  right: 15px;
+  top: 13px;
+}
+.dropbtn::before {
+  position: absolute;
+  content: "";
+  background-image: url(../../../assets/images/flats/sortPrice.svg);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  left: 11px;
+}
+.show {
+  display: block !important;
+}
+.downContent {
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  min-width: 232px;
+  z-index: 1;
+  box-shadow: 0px 0px 40px rgba(135, 124, 202, 0.3);
+  border-radius: 10px;
+  top: 48px;
+  font-size: 14px;
+  color: #1e2123;
+  font-family: "Medium";
+  cursor: default;
+}
+.downElement {
+  padding: 10px 10px 10px 15px;
+}
+.downElement:first-child {
+  border-radius: 20px 20px 0px 0px;
+}
+.downElement:last-child {
+  border-radius: 0px 0px 20px 20px;
+}
+.downElement:hover {
+  background: #f8f8f8;
+}

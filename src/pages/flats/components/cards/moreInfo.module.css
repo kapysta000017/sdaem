@@ -1,0 +1,13 @@
+.btn {
+  background: rgba(255, 213, 79, 0.1);
+  border-radius: 18px;
+  padding: 10px 15px;
+  border: 0px solid transparent;
+  color: #fec100;
+  font-size: 14px;
+  font-family: "Bold";
+}
+.btn:hover {
+  background: rgba(255, 213, 79, 0.2);
+  transition: 0.15s;
+}

@@ -1,0 +1,92 @@
+.inner {
+  padding: 45px 320px 0px 320px;
+}
+.titleContainer {
+  position: relative;
+  margin-bottom: 35px;
+}
+.titleContainer::after {
+  content: "";
+  position: absolute;
+  background-image: url(../../assets/images/flats/back.png);
+  width: 1920px;
+  background: linear-gradient(90deg, #94afff 0%, #4e64f9 94.5%);
+  opacity: 0.1;
+  z-index: -1;
+  height: 130%;
+  top: -45px;
+  left: -320px;
+}
+.titleText {
+  color: #1e2123;
+  font-size: 25px;
+  font-family: "Bold";
+  margin-bottom: 40px;
+}
+.titleInfo {
+  color: #1e2123;
+  font-size: 16px;
+  font-family: "Medium";
+}
+.containerKindCardsContainer {
+  display: flex;
+  padding: 24px 320px 0px;
+  justify-content: space-between;
+}
+.kindCardsContainer {
+  display: flex;
+  gap: 10px;
+}
+.cardsContainer {
+  padding: 83px 320px 80px 320px;
+}
+.actionsUser {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.socialContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #686868;
+  font-size: 14px;
+  font-family: "Medium";
+}
+.footer {
+  position: relative;
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 75px;
+  padding-bottom: 87px;
+}
+.footer::after {
+  position: absolute;
+  content: "";
+  background-image: url("./../../assets/images/main/bg.png"),
+    linear-gradient(360deg, #7e6af3 15.95%, #6540cd 63.1%);
+  filter: blur(2px);
+  width: 100%;
+  height: 310px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.footerTitle {
+  color: #ffffff;
+  font-size: 25px;
+  font-family: "Bold";
+  margin-bottom: 20px;
+}
+.description {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Medium";
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 23px;
+}
+.mapHover:hover {
+  color: #fec100;
+  transition: 0.15s;
+}

@@ -43,6 +43,7 @@
 }
 .link:hover {
   background: #fec100;
+  transition: 0.15s;
 }
 .link::before {
   content: "";
