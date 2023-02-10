@@ -106,7 +106,7 @@
       "id": "15"
     }
   ],
-  "hotel": [
+  "flats": [
     {
       "price": "847.00",
       "city": "Минск",
@@ -124,7 +124,15 @@
       "crockery": true,
       "dishwasher": true,
       "text": "Nesciunt doloremque quaerat doloribus illo at laborum. Rerum nam dolorum dicta perferendis expedita. Officiis totam doloremque commodi saepe deleniti dolor exercitationem. Ratione harum unde quaerat velit soluta est. Delectus necessitatibus vero ipsum suscipit beatae velit corrupti labore dicta.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Miller",
         "phone": "353-859-6456",
         "email": "Jermey_Berge@hotmail.com",
@@ -149,7 +157,15 @@
       "crockery": false,
       "dishwasher": true,
       "text": "Quo iure tenetur velit eligendi fugit asperiores. Accusamus numquam dolore qui ullam dolorem ratione vitae voluptatem possimus. Commodi reprehenderit quas. Quis sint qui voluptatibus nemo occaecati impedit corporis consequuntur quaerat. Ipsa iusto numquam alias quas optio doloremque. Inventore nihil quia amet voluptas laudantium incidunt illo esse.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Brandyn",
         "phone": "452-875-8417",
         "email": "Richie95@gmail.com",
@@ -174,7 +190,15 @@
       "crockery": true,
       "dishwasher": true,
       "text": "Explicabo explicabo ducimus aut. Pariatur necessitatibus voluptate accusantium voluptatum vero dolores repudiandae cum. Cumque labore velit molestias exercitationem praesentium vitae eius quisquam.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Annalise",
         "phone": "652-950-0602",
         "email": "Dannie40@gmail.com",
@@ -199,7 +223,15 @@
       "crockery": true,
       "dishwasher": true,
       "text": "Quaerat ut deleniti illo laboriosam officia officia occaecati soluta nulla. Sed architecto occaecati. Corrupti sit impedit. Adipisci assumenda veritatis in ducimus itaque quisquam.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Camren",
         "phone": "276-274-0720",
         "email": "Rebeka13@yahoo.com",
@@ -224,7 +256,15 @@
       "crockery": false,
       "dishwasher": true,
       "text": "Libero eos repellendus incidunt distinctio assumenda dolorem officiis laboriosam ut. Facere quaerat placeat vitae nam dolores ipsam. Itaque officia quam explicabo nisi aut dolore architecto debitis. Vitae provident ducimus. Eligendi iusto esse quae rerum voluptatibus officiis tenetur.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Trevion",
         "phone": "900-680-0807",
         "email": "Edgardo15@hotmail.com",
@@ -249,7 +289,15 @@
       "crockery": true,
       "dishwasher": false,
       "text": "Odit animi aliquid maiores vel ut dolorum quasi. Quidem repellat veniam corrupti dignissimos maiores ipsa veniam commodi. Fugiat quibusdam molestias aliquid amet amet veniam sequi ex unde.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Ursula",
         "phone": "931-358-3768",
         "email": "Katrine29@hotmail.com",
@@ -274,7 +322,15 @@
       "crockery": true,
       "dishwasher": true,
       "text": "Quas laboriosam recusandae qui fugit asperiores nisi. Nostrum hic nemo excepturi aliquam dolores ipsam eos. Architecto quam ex id esse hic. Hic quod non aspernatur corrupti deleniti harum dolor non quam. Eum alias eveniet vero dolorem aliquid odit. Tempore itaque voluptate mollitia exercitationem unde aliquam nemo fuga.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Gage",
         "phone": "686-751-7992",
         "email": "Janice_Gottlieb@gmail.com",
@@ -299,7 +355,15 @@
       "crockery": true,
       "dishwasher": true,
       "text": "Velit itaque eveniet ducimus ratione maiores deleniti debitis. Aspernatur incidunt voluptatem. Quasi illum amet sed. Tempore qui nemo laudantium. Eaque corporis vel incidunt iure quae mollitia modi ratione sint. Natus non ullam officia molestiae adipisci sapiente.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Jacklyn",
         "phone": "391-740-6561",
         "email": "Ola_Feil@hotmail.com",
@@ -324,7 +388,15 @@
       "crockery": true,
       "dishwasher": true,
       "text": "Adipisci nobis architecto. Velit eligendi nobis assumenda esse. Tempora natus hic quod quos sunt. Voluptatibus ut et.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Hollie",
         "phone": "497-213-5372",
         "email": "Janis.Ziemann@gmail.com",
@@ -349,7 +421,15 @@
       "crockery": true,
       "dishwasher": false,
       "text": "Odio dolores quisquam doloribus. Aliquam similique quam aliquam beatae repudiandae doloribus minima.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Adelbert",
         "phone": "313-803-8316",
         "email": "Sandy_Schuppe@gmail.com",
@@ -374,7 +454,15 @@
       "crockery": true,
       "dishwasher": true,
       "text": "Debitis mollitia ex recusandae. Aspernatur earum facilis odit consectetur magnam debitis facilis repellat. Voluptas optio saepe ipsa nihil repudiandae error saepe eligendi.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Alena",
         "phone": "377-898-4856",
         "email": "Brady83@hotmail.com",
@@ -399,7 +487,15 @@
       "crockery": true,
       "dishwasher": true,
       "text": "Neque ea quo facilis. Fuga omnis voluptatibus nobis ducimus. Deleniti rem ipsum. Pariatur repellat optio minima. Labore iure vero error quas eos corporis totam molestiae at. Quos at incidunt sequi.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Vallie",
         "phone": "220-299-0584",
         "email": "Rosetta61@yahoo.com",
@@ -424,7 +520,15 @@
       "crockery": true,
       "dishwasher": true,
       "text": "Odit doloribus itaque pariatur laudantium necessitatibus sunt in quae neque. Nisi nesciunt soluta. Tenetur dicta velit facere cumque odio at minima perferendis in. Fuga officiis perferendis doloremque fugiat doloremque praesentium repudiandae. Qui debitis nulla at. Quisquam tempora omnis dolor dignissimos deleniti eaque.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Annabel",
         "phone": "412-518-6614",
         "email": "Griffin.Medhurst57@yahoo.com",
@@ -449,7 +553,15 @@
       "crockery": true,
       "dishwasher": false,
       "text": "Veniam assumenda cumque atque asperiores aliquid pariatur voluptates ab. Doloribus voluptate doloribus hic magni excepturi voluptatibus in. Voluptatem autem ullam sit.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Kaycee",
         "phone": "413-338-1450",
         "email": "Buford_Pacocha39@gmail.com",
@@ -474,7 +586,15 @@
       "crockery": true,
       "dishwasher": true,
       "text": "Illo voluptates dicta quam. Eligendi consequatur magnam dolore quidem sequi praesentium. Deleniti adipisci vero dolorem asperiores id cum iste.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Will",
         "phone": "709-271-8108",
         "email": "Brannon.Walter45@yahoo.com",
@@ -499,7 +619,15 @@
       "crockery": true,
       "dishwasher": true,
       "text": "Suscipit dolor in repellendus at cum voluptates tenetur. Sed eveniet consectetur dolore expedita. Blanditiis ab quasi laudantium autem. Ex quidem architecto excepturi iste cupiditate hic. Nesciunt dolore quod voluptatibus necessitatibus illo architecto corrupti. Labore voluptate soluta repellat perspiciatis.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Margret",
         "phone": "904-472-0986",
         "email": "Nikko32@yahoo.com",
@@ -524,7 +652,15 @@
       "crockery": true,
       "dishwasher": true,
       "text": "Deserunt similique eum dolorum cum voluptatibus. Eligendi magnam a itaque quas repellendus adipisci quia. Delectus sint consectetur laborum placeat. Reiciendis corrupti recusandae dicta dolores minus impedit.",
-      "contact": {
+      "img": [
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms",
+        "https://loremflickr.com/410/220/rooms"
+      ],
+      "contactUser": {
         "name": "Otto",
         "phone": "368-965-6739",
         "email": "Camilla_Bogan@hotmail.com",

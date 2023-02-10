@@ -13,8 +13,10 @@
     "@types/react-dom": "^18.0.8",
     "axios": "^1.2.1",
     "classnames": "^2.3.2",
+    "eslint-plugin-react-hooks": "^5.0.0-next-4bf2113a1-20230206",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.4",
     "react-scripts": "5.0.1",
@@ -26,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server -w server/db.json -p 3001",
+    "server": "json-server -w src/bd/db.json -p 3001",
     "dev": "concurrently \"npm run server\" \"npm start\""
   },
   "eslintConfig": {
@@ -48,9 +50,11 @@
     ]
   },
   "devDependencies": {
+    "json-server": "^0.17.1",
+    "react-google-recaptcha": "^2.1.0",
     "@types/react-google-recaptcha": "^2.1.5",
     "concurrently": "^7.6.0",
-    "json-server": "^0.17.1",
-    "react-google-recaptcha": "^2.1.0"
+    "react-hook-form": "^7.43.1",
+    "swiper": "^9.0.3"
   }
 }
