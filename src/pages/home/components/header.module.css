@@ -23,6 +23,7 @@
 }
 .add:hover {
   background: linear-gradient(90deg, #867cfc 0%, #6929f3 94.5%);
+  transition: 0.15s;
 }
 .add::before {
   position: absolute;

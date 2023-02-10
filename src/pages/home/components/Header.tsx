@@ -5,6 +5,7 @@ import classnames from "classnames"
 import { useSearchParams } from "react-router-dom"
 import { useAppSelector } from "../../../store/hook/selector"
 import { useEffect } from "react"
+import AddAd from "../../../components/AddAd"
 
 export default function Header() {
   const citiesList = useAppSelector(
@@ -54,7 +55,7 @@ export default function Header() {
             {citiesList.map((element) => {
               return (
                 <Link
-                  to={`/flats?city=${element}&kind=tile`}
+                  to={`/flats?city=${element}&kind=tile&_page=1`}
                   key={Math.random()}
                   className={header.downElement}
                 >
@@ -94,9 +95,7 @@ export default function Header() {
         >
           Авто напрокат
         </NavLink>
-        <NavLink to="/add" className={header.add}>
-          Разместить объявление
-        </NavLink>
+        <AddAd to="/add" className={header.add} value="Разместить объявление" />
       </nav>
     </header>
   )

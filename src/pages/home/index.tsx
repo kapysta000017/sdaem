@@ -12,7 +12,6 @@ export default function Home() {
   useEffect(() => {
     location.pathname === "/" &&
       navigate("/main?category=flats", { replace: true })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

@@ -54,7 +54,7 @@ export default function Footer() {
               {citiesList.map((element) => {
                 return (
                   <Link
-                    to={`/flats?city=${element}`}
+                    to={`/flats?city=${element}&kind=tile&_page=1`}
                     className={footer.linkGray}
                     key={Math.random()}
                   >
