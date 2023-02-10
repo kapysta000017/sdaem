@@ -1,0 +1,17 @@
+.inner {
+  margin-top: 136px;
+  padding: 0px 320px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.inner::after {
+  content: "";
+  position: absolute;
+  background-image: url(./../../../../assets/images/main/footer/pointsGold.svg);
+  width: 68px;
+  height: 62px;
+  right: 340px;
+  top: -90px;
+}

@@ -1,68 +1,47 @@
 import Filter from "./components/Filter"
-import main from "./index.module.css"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useSearchParams } from "react-router-dom"
 import { useAppDispatch } from "../../store/hook/dispatch"
-import { removeCitiesRoomsList, fetchAllHotel } from "./store/sliceMainFlats"
-import { fetchOneOption } from "./store/sliceOption"
-import { DefaultInputValues, InputValues } from "./store/type"
-import { useAppSelector } from "../../store/hook/selector"
+import {
+  removeCitiesRoomsList,
+  fetchAllFlats,
+} from "../../store/sliceMainFlats"
+import { fetchOneOption } from "../../components/stores/sliceOption"
+import main from "./index.module.css"
+import CategoriesCard from "./components/CategoriesCard"
+import SideBarMenu from "./components/SideBarMenu"
+import Slider from "./components/Slider"
+import WorkPath from "./components/WorkPath/WorkPath"
+import Footer from "./components/Footer/Footer"
+import { fetchAllNews } from "../news/store/sliceCards"
 
 export default function Main() {
+  const dispatch = useAppDispatch()
   const [searchParams, setSearchParams] = useSearchParams()
   const categoryParams = searchParams.get("category")
 
-  const dispatch = useAppDispatch()
-  const optionElements = useAppSelector((state) => state.option.options)
-
-  const defalutParams = {
-    city: "Выберите",
-    rooms: "Выберите",
-    priceFrom: "",
-    priceTo: "",
-    differentPrice: "",
-  }
-
-  const [formInputValues, setFormInputValues] = useState<
-    DefaultInputValues | InputValues
-  >(defalutParams)
-  const formInputValuesMoreOptionFlats = formInputValues as InputValues
-
-  const flagDisabledLink =
-    formInputValuesMoreOptionFlats.city !== "Выберите" &&
-    formInputValuesMoreOptionFlats.rooms !== "Выберите"
-
-  const listParams = optionElements.map((element) => element.params)
-  const objParamsAdd = listParams.reduce(
-    (target: Record<string, boolean>, key) => {
-      target[key] = false
-      return target
-    },
-    {}
-  )
-
-  useEffect(() => {
-    setFormInputValues((state) => ({ ...state, ...objParamsAdd }))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [optionElements])
-
   useEffect(() => {
     categoryParams !== "flats" && dispatch(removeCitiesRoomsList([]))
-    categoryParams === "flats" && dispatch(fetchAllHotel())
+    categoryParams === "flats" && dispatch(fetchAllFlats())
     dispatch(fetchOneOption(categoryParams))
-    setFormInputValues(() => defalutParams)
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoryParams, dispatch])
 
+  useEffect(() => {
+    dispatch(fetchAllNews("1"))
+  }, [])
+
   return (
-    <div className={main.inner}>
-      <Filter
-        flagDisabledLink={flagDisabledLink}
-        formInputValues={formInputValues}
-        setFormInputValues={setFormInputValues}
-        formInputValuesMoreOptionFlats={formInputValuesMoreOptionFlats}
-      />
+    <div>
+      <div style={{ padding: "0px 320px" }}>
+        <Filter />
+        <div className={main.menu}>
+          <CategoriesCard />
+          <SideBarMenu />
+        </div>
+        <Slider />
+      </div>
+      <WorkPath />
+      <Footer />
     </div>
   )
 }

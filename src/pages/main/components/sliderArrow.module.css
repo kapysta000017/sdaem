@@ -1,0 +1,35 @@
+.swiperButtonNext {
+  position: relative;
+  left: 52%;
+}
+.swiperButtonNext:hover {
+  background: rgba(102, 78, 249, 0.2);
+}
+.swiperButtonPrev {
+  position: relative;
+  left: 48%;
+}
+.swiperButtonPrev:hover {
+  background: rgba(102, 78, 249, 0.2);
+}
+
+.swiperButton {
+  transform: translate(-50%, -50%);
+  height: 40px;
+  width: 40px;
+  background: rgba(102, 78, 249, 0.1);
+  border-radius: 50%;
+  border: 1px solid rgba(102, 78, 249, 1);
+  position: absolute;
+  top: 75%;
+  z-index: 10;
+  cursor: default;
+}
+.swiperButton svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+  height: 1.5rem;
+}

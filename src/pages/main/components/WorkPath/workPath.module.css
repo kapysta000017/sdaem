@@ -1,0 +1,82 @@
+.inner {
+  text-align: center;
+  position: relative;
+  padding: 75px 320px 0px;
+}
+.inner::after {
+  position: absolute;
+  content: "";
+  background-image: url("./../../../../assets/images/main/bg.png"),
+    linear-gradient(360deg, #7e6af3 15.95%, #6540cd 63.1%);
+  filter: blur(2px);
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 440px;
+  z-index: -1;
+}
+.title {
+  font-family: "Bold";
+  font-size: 25px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.about {
+  font-family: "Medium";
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  width: 390px;
+  margin: 0 auto;
+}
+.mapHover:hover {
+  color: #fec100;
+  transition: 0.15s;
+}
+.points {
+  position: absolute;
+  right: 140px;
+  top: 46px;
+}
+.containerCards {
+  margin-top: 95px;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.price {
+  position: relative;
+  font-family: "Bold";
+  color: #242424;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 10px 43px 10px 18px;
+  border-radius: 19px;
+  background: #ffd54f;
+}
+.price:hover {
+  background: #fec100;
+  transition: 0.15s;
+}
+.price::before {
+  position: absolute;
+  content: "";
+  background-image: url(./../../../../assets/images/main/arrowBlack.svg);
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 12px;
+  right: 22px;
+  top: 14px;
+}
+.add {
+  position: relative;
+  font-family: "Bold";
+  color: #242424;
+  padding: 10px 18px;
+  border-radius: 19px;
+  background: #ffd54f;
+}
+.add:hover {
+  background: #fec100;
+  transition: 0.15s;
+}

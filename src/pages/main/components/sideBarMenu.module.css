@@ -1,0 +1,29 @@
+.categoryName {
+  color: #333333;
+  font-size: 18px;
+  font-family: "Bold";
+  width: 248px;
+  margin-bottom: 15px;
+}
+.key {
+  color: rgba(254, 183, 0, 1);
+  font-family: "Regular";
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.key:hover {
+  transform: translate(9px);
+  transition: 0.2s;
+}
+.key:last-child {
+  margin-bottom: 0px;
+}
+.value {
+  font-family: "Regular";
+  font-size: 14px;
+  color: #bdbdbd;
+}
+.citiesAmount {
+  display: flex;
+  justify-content: space-between;
+}

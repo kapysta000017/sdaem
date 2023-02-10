@@ -7,24 +7,16 @@ import Option from "../../../components/Option"
 import DropDown from "../../../components/DropDown"
 import map from "../../../assets/images/main/map.svg"
 import { useAppSelector } from "../../../store/hook/selector"
-import { useEffect } from "react"
 import ShowOption from "../../../components/ShowOptions"
 import Price from "../../../components/Price"
-import { DefaultInputValues, InputValues } from "./../store/type"
+import { useState, useEffect } from "react"
+import {
+  DefaultInputValues,
+  InputValues,
+  ControlCheckbox,
+} from "../../../store/type"
 
-export default function Filter({
-  flagDisabledLink,
-  formInputValues,
-  setFormInputValues,
-  formInputValuesMoreOptionFlats,
-}: {
-  flagDisabledLink: boolean
-  formInputValues: DefaultInputValues | InputValues
-  setFormInputValues: React.Dispatch<
-    React.SetStateAction<DefaultInputValues | InputValues>
-  >
-  formInputValuesMoreOptionFlats: Record<string, string | boolean | number>
-}) {
+export default function Filter() {
   const allCategory: Array<{ name: string; feature: string; id: number }> = [
     { name: "Квартиры на сутки", feature: "flats", id: 1 },
     { name: "Коттеджи и усадьбы", feature: "cottages", id: 2 },
@@ -32,17 +24,57 @@ export default function Filter({
     { name: "Авто напрокат", feature: "cars", id: 4 },
   ]
 
-  const citiesList = useAppSelector((state) => state.hotels.citiesList)
-  const roomsList = useAppSelector((state) => state.hotels.roomsList)
+  const optionElements = useAppSelector((state) => state.option.options)
+  const citiesList = useAppSelector((state) => state.flats.citiesList)
+  const roomsList = useAppSelector((state) => state.flats.roomsList)
 
   const [searchParams, setSearchParams] = useSearchParams()
   const categoryParams = searchParams.get("category")
-  const optionParams = searchParams.get("option")
+
+  const defalutParams = {
+    city: "Выберите",
+    rooms: "Выберите",
+    priceFrom: "",
+    priceTo: "",
+    differentPrice: "",
+    sleep: "Выберите",
+    underground: "Выберите",
+    district: "Выберите",
+  }
+
+  const [formInputValues, setFormInputValues] =
+    useState<DefaultInputValues>(defalutParams)
+
+  const formInputValuesMoreOptionFlats = formInputValues as InputValues
+
+  const listParams = optionElements.map((element) => element.params)
+  const objParamsAdd = listParams.reduce(
+    (target: Record<string, boolean>, key) => {
+      target[key] = false
+      return target
+    },
+    {}
+  )
+  const [optionElementsControlCheckboxx, setOptionElementsControlCheckbox] =
+    useState<Array<ControlCheckbox>>([])
+
+  const optionElementsControlCheckbox = optionElements.map((element) => {
+    return {
+      ...element,
+      check: objParamsAdd[element.params],
+    }
+  })
 
   useEffect(() => {
-    setSearchParams({ category: "flats", option: "false" })
+    setFormInputValues((state) => ({ ...state, ...objParamsAdd }))
+    setOptionElementsControlCheckbox(optionElementsControlCheckbox)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [optionElements])
+
+  useEffect(() => {
+    setFormInputValues(() => defalutParams)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categoryParams])
 
   return (
     <div className={filter.inner}>
@@ -81,7 +113,7 @@ export default function Filter({
           <DropDown
             roomsList={roomsList}
             id={"rooms"}
-            style={{ paddingRight: "120px" }}
+            style={{ paddingRight: "100px" }}
             formInputValues={formInputValues}
             setFormInputValues={setFormInputValues}
           />
@@ -94,34 +126,50 @@ export default function Filter({
           />
         </div>
         <ShowOption />
-        <div className={filter.containerMap}>
+        <Link to="/map" className={filter.containerMap}>
           На карте
           <img src={map} alt="map" />
-        </div>
+        </Link>
         {categoryParams === "flats" && (
           <LinkComponentGold
-            to={`/hotels?city=${formInputValues.city}&rooms=${formInputValues.rooms}&price=${formInputValues.differentPrice}&gascooker=${formInputValuesMoreOptionFlats.gascooker}&oven=${formInputValuesMoreOptionFlats.oven}&percolator=${formInputValuesMoreOptionFlats.percolator}&microwave=${formInputValuesMoreOptionFlats.microwave}&crockery=${formInputValuesMoreOptionFlats.crockery}&dishwasher=${formInputValuesMoreOptionFlats.dishwasher}`}
-            flagDisabledLink={flagDisabledLink}
+            to={`/flats?city=${
+              formInputValues.city === "Выберите" ? "" : formInputValues.city
+            }&rooms=${
+              formInputValues.rooms === "Выберите" ? "" : formInputValues.rooms
+            }&price=${formInputValues.differentPrice}&district=${
+              formInputValues.district === "Выберите"
+                ? ""
+                : formInputValues.district
+            }&underground=${
+              formInputValues.underground === "Выберите"
+                ? ""
+                : formInputValues.underground
+            }&sleep=${
+              formInputValues.sleep === "Выберите" ? "" : formInputValues.sleep
+            }&gascooker=${formInputValuesMoreOptionFlats.gascooker}&oven=${
+              formInputValuesMoreOptionFlats.oven
+            }&percolator=${
+              formInputValuesMoreOptionFlats.percolator
+            }&microwave=${formInputValuesMoreOptionFlats.microwave}&crockery=${
+              formInputValuesMoreOptionFlats.crockery
+            }&dishwasher=${
+              formInputValuesMoreOptionFlats.dishwasher
+            }&kind=tile&_page=1`}
           >
             Показать
           </LinkComponentGold>
         )}
         {categoryParams !== "flats" && (
-          <LinkComponentGold
-            to={`/cottage`}
-            flagDisabledLink={flagDisabledLink}
-          >
-            Показать
-          </LinkComponentGold>
+          <LinkComponentGold to={`/cottage`}>Показать</LinkComponentGold>
         )}
       </div>
-      {optionParams === "true" && (
-        <Option
-          formInputValuesMoreOptionFlats={formInputValuesMoreOptionFlats}
-          setFormInputValues={setFormInputValues}
-          style={{ borderRadius: "10px 10px 10px 10px" }}
-        />
-      )}
+      <Option
+        setFormInputValues={setFormInputValues}
+        formInputValues={formInputValues}
+        style={{ padding: "20px", borderRadius: "10px" }}
+        optionElementsControlCheckbox={optionElementsControlCheckboxx}
+        setOptionElementsControlCheckbox={setOptionElementsControlCheckbox}
+      />
     </div>
   )
 }

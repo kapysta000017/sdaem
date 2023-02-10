@@ -1,0 +1,65 @@
+.inner {
+  padding: 33px 23px;
+  background: #fffefe;
+  box-shadow: 0px 20px 40px rgba(135, 124, 202, 0.15);
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+.title {
+  font-family: "Bold";
+  font-size: 25px;
+  line-height: 30px;
+  color: #1e2123;
+  margin-bottom: 26px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+.listElement {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(102, 78, 249, 0.1);
+}
+.listElement:last-child {
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+.link {
+  font-family: "Semi Bold";
+  font-size: 14px;
+  line-height: 17px;
+  color: #1e2123;
+}
+.link:visited {
+  color: #664ef9;
+}
+.link:active {
+  color: #664ef9;
+}
+.data {
+  font-family: "Regular";
+  font-size: 12px;
+  line-height: 15px;
+  color: #8291a3;
+  display: block;
+  margin-top: 6px;
+}
+.linkAll {
+  position: relative;
+  font-family: "Bold";
+  font-size: 14px;
+  line-height: 17px;
+  color: #664ef9;
+}
+.linkAll::after {
+  position: absolute;
+  content: "";
+  background-image: url(./../../../../assets/images/main/footer/arrowPurple.svg);
+  right: -15px;
+  width: 7px;
+  height: 12px;
+  top: 3px;
+}
