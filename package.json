@@ -26,7 +26,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server -w src/bd/db.json -p 3001",
+    "server": "json-server -w public/db.json -p 3001",
     "start": "concurrently \"npm run server\" \"npm run startclient\""
   },
   "eslintConfig": {
